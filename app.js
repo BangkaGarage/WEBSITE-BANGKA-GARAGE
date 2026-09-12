@@ -90,14 +90,11 @@ function renderVehicleTable() {
   $('#vehicleTableBody').innerHTML = state.vehicles.map((vehicle) => `<tr><td>${vehicle.brand}</td><td>${vehicle.model}</td><td>${vehicle.vehicle_type || '-'}</td><td>${vehicle.energy_type || '-'}</td><td>${vehicle.price_category || '-'}</td><td>${vehicle.robotic_status || '-'}</td></tr>`).join('') || '<tr><td colspan="6" class="empty-cell">Belum ada data kendaraan.</td></tr>';
 }
 
-function updateRecommendation() {
+function calculateRecommendation() {
   const service = state.services.find((item) => item.id === $('#serviceSelect').value);
   const vehicle = state.vehicles.find((item) => item.id === $('#vehicleSelect').value);
   const dirty = $('#conditionSelect').value === 'extra_dirty';
-  if (!service) {
-    $('#priceRecommendation').textContent = 'Pilih kendaraan dan layanan untuk melihat rekomendasi harga.';
-    return;
-  }
+  if (!service) return null;
   let recommended = service.base_price;
   let label = 'Harga dasar';
   if (vehicle && service.vehicle_kind === 'car') {
@@ -108,8 +105,85 @@ function updateRecommendation() {
     }
   }
   const surcharge = dirty ? (state.services.find((item) => item.code === 'EXTRA_DIRTY')?.base_price || 0) : 0;
-  const total = recommended + surcharge;
-  $('#priceRecommendation').innerHTML = `${label}: <strong>${rupiah(recommended)}</strong>${surcharge ? ` + Extra Dirty ${rupiah(surcharge)} = <strong>${rupiah(total)}</strong>` : ''}<br><small>Harga bersifat rekomendasi dan masih dapat disesuaikan kasir.</small>`;
+  return { service, vehicle, label, baseRecommended: Number(recommended), surcharge: Number(surcharge), total: Number(recommended) + Number(surcharge) };
+}
+
+function updateRecommendation() {
+  const result = calculateRecommendation();
+  if (!result) {
+    $('#priceRecommendation').textContent = 'Pilih kendaraan dan layanan untuk melihat rekomendasi harga.';
+    return;
+  }
+  const { label, baseRecommended, surcharge, total } = result;
+  if (!$('#finalPriceInput').dataset.edited) $('#finalPriceInput').value = total;
+  $('#priceRecommendation').innerHTML = `${label}: <strong>${rupiah(baseRecommended)}</strong>${surcharge ? ` + Extra Dirty ${rupiah(surcharge)} = <strong>${rupiah(total)}</strong>` : ''}<br><small>Harga bersifat rekomendasi dan masih dapat disesuaikan kasir.</small>`;
+}
+
+async function saveTransaction(event) {
+  event.preventDefault();
+  const submitButton = event.submitter;
+  const plate = $('#plateInput').value.trim().toUpperCase().replace(/\s+/g, ' ');
+  const result = calculateRecommendation();
+  if (!plate) return showToast('Nomor kendaraan wajib diisi.', 'error');
+  if (!result) return showToast('Pilih layanan terlebih dahulu.', 'error');
+  const finalTotal = Number($('#finalPriceInput').value || result.total);
+  const reason = $('#priceReasonInput').value.trim();
+  if (!Number.isFinite(finalTotal) || finalTotal < 0) return showToast('Harga final tidak valid.', 'error');
+  if (finalTotal !== result.total && !reason) return showToast('Alasan perubahan harga wajib diisi.', 'error');
+  if (finalTotal < result.surcharge) return showToast('Harga final tidak boleh lebih kecil dari Extra Dirty.', 'error');
+  setLoading(submitButton, true);
+  try {
+    const vehicle = result.vehicle;
+    const transactionPayload = {
+      plate_number: plate,
+      member_id: null,
+      vehicle_master_id: vehicle?.id || null,
+      vehicle_brand: vehicle?.brand || null,
+      vehicle_model: vehicle?.model || null,
+      vehicle_category: vehicle?.price_category || null,
+      vehicle_condition: $('#conditionSelect').value,
+      recommended_total: result.total,
+      final_total: finalTotal,
+      price_adjustment_reason: finalTotal !== result.total ? reason : null,
+      created_by: state.user.id
+    };
+    const { data: transaction, error: transactionError } = await db.from('transactions').insert(transactionPayload).select('id,transaction_no,status').single();
+    if (transactionError) throw transactionError;
+    const baseFinal = finalTotal - result.surcharge;
+    const items = [{
+      transaction_id: transaction.id,
+      service_id: result.service.id,
+      service_name_snapshot: result.service.name,
+      recommended_price: result.baseRecommended,
+      final_price: baseFinal,
+      stamp_eligible: result.service.stamp_eligible,
+      notes: null
+    }];
+    if (result.surcharge > 0) {
+      const extraDirty = state.services.find((item) => item.code === 'EXTRA_DIRTY');
+      items.push({
+        transaction_id: transaction.id,
+        service_id: extraDirty?.id || null,
+        service_name_snapshot: extraDirty?.name || 'Extra Dirty',
+        recommended_price: result.surcharge,
+        final_price: result.surcharge,
+        stamp_eligible: false,
+        notes: 'Tambahan kondisi kendaraan sangat kotor'
+      });
+    }
+    const { error: itemError } = await db.from('transaction_items').insert(items);
+    if (itemError) throw itemError;
+    $('#transactionForm').reset();
+    $('#finalPriceInput').dataset.edited = '';
+    $('#priceRecommendation').textContent = 'Pilih kendaraan dan layanan untuk melihat rekomendasi harga.';
+    showPage('dashboardPage');
+    showToast(`Transaksi ${transaction.transaction_no} berhasil disimpan.`, 'success');
+  } catch (error) {
+    console.error(error);
+    showToast(error.message || 'Transaksi gagal disimpan.', 'error');
+  } finally {
+    setLoading(submitButton, false);
+  }
 }
 
 async function enterApp(user) {
@@ -134,6 +208,7 @@ async function init() {
   $('#vehicleSelect').addEventListener('change', updateRecommendation);
   $('#serviceSelect').addEventListener('change', updateRecommendation);
   $('#conditionSelect').addEventListener('change', updateRecommendation);
+  $('#finalPriceInput').addEventListener('input', () => { $('#finalPriceInput').dataset.edited = 'true'; });
   $('#loginForm').addEventListener('submit', async (event) => {
     event.preventDefault();
     const button = event.submitter;
@@ -148,10 +223,7 @@ async function init() {
     await enterApp(data.user);
   });
   $('#logoutButton').addEventListener('click', () => db.auth.signOut());
-  $('#transactionForm').addEventListener('submit', (event) => {
-    event.preventDefault();
-    showToast('Form transaksi siap. Penyimpanan akan diaktifkan pada tahap berikutnya.', 'info');
-  });
+  $('#transactionForm').addEventListener('submit', saveTransaction);
   db.auth.onAuthStateChange(async (_event, session) => {
     if (session?.user && $('#appView').classList.contains('hidden')) await enterApp(session.user);
     if (!session) {
