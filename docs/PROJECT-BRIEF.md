@@ -39,19 +39,21 @@ Calon pelanggan, pengunjung, dan komunitas yang ingin mengetahui Bangka Garage, 
 - Pengalaman visual yang kuat dan memanjakan, dengan antarmuka serta navigasi yang halus.
 - Motion dan efek visual digunakan untuk memperkuat cerita, bukan mengganggu pemahaman atau penggunaan.
 - Pengunjung mudah memahami perbedaan tiap brand/komunitas dan menemukan cara untuk menghubungi, berkunjung, atau menggunakan layanan.
+- Ambisi desain: menciptakan pengalaman yang berkesan dan khas, bukan meniru template umum. Keunikan harus tetap seimbang dengan usability, aksesibilitas, performa, dan kejelasan informasi; tidak menjanjikan bahwa desain belum pernah ada di dunia.
 
-## Rekomendasi struktur website — arah disetujui untuk eksplorasi
+## Struktur website — keputusan yang disepakati
 
-Konsep yang disarankan adalah **brand hub dengan halaman brand dan storyline khusus**:
-
-1. **Beranda Bangka Garage** — memperkenalkan Bangka Garage sebagai culture and lifestyle hub dan mengarahkan pengunjung ke brand, pengalaman, storyline, serta informasi kunjungan.
-2. **Jelajahi brand** — Robotic Carwash, Rebel, Rebel House, Kampoeng Garage, dan Scudetto Auto Detailing; tiap brand memiliki ringkasan dan informasi yang relevan.
-3. **Club House / komunitas** — memperkenalkan Club House Rebellion MC 13 Indonesia setelah cakupan informasi dan hubungan dengan Bangka Garage dikonfirmasi.
-4. **Halaman storyline owner** — kisah perjalanan hidup owner dari masa kecil hingga saat ini, disusun seperti buku inspiratif dan motivatif, termasuk fase jatuh bangun yang memang ingin dibagikan oleh owner.
-5. **Cerita Bangka Garage** — asal-usul, nilai, dan hubungan antarbrand, setelah informasinya dikonfirmasi.
-6. **Lokasi dan kontak** — informasi utama dan petunjuk kunjungan yang terverifikasi.
-
-Struktur final, jumlah halaman, dan hubungan navigasi antara situs induk, brand, storyline, serta komunitas masih perlu diputuskan.
+- Website menggunakan **struktur multi-page**.
+- **Bangka Garage sebagai brand induk tetap menjadi fokus utama**, terutama di beranda.
+- **Storyline owner adalah bagian penting dari pengalaman**, dengan halaman khusus yang terhubung jelas dari beranda, tetapi bukan menggantikan fokus utama Bangka Garage.
+- Rancangan sitemap awal:
+  1. **Home** — memperkenalkan Bangka Garage sebagai culture and lifestyle hub; menampilkan cerita inti, pilihan brand/komunitas, dan ajakan menjelajahi lebih lanjut.
+  2. **About Bangka Garage** — visi, nilai, asal-usul, dan hubungan ekosistem setelah dikonfirmasi.
+  3. **Brands / Experiences** — direktori brand yang menautkan ke halaman detail Robotic Carwash, Rebel, Rebel House, Kampoeng Garage, serta Scudetto Auto Detailing.
+  4. **Community** — informasi Club House Rebellion MC 13 Indonesia setelah cakupan dan hubungan resminya dikonfirmasi.
+  5. **The Owner’s Story / Storyline** — perjalanan owner dalam format bab seperti buku inspiratif dan motivatif, berdasarkan fakta serta persetujuan owner.
+  6. **Visit / Contact** — lokasi, jam operasional, peta, kontak, dan jalur tindakan yang telah diverifikasi.
+- Sitemap dan kebutuhan halaman detail per brand masih dapat disesuaikan setelah prioritas konten dan kebutuhan pengguna dibahas.
 
 ## Storyline owner: prinsip editorial dan motion
 
@@ -65,7 +67,7 @@ Struktur final, jumlah halaman, dan hubungan navigasi antara situs induk, brand,
 
 Arah awal: autentik, berkarakter, dan terasa profesional, menggunakan foto serta materi asli Bangka Garage dan brand-brandnya bila tersedia. Identitas utama perlu menyatukan pengalaman, sementara tiap brand tetap dapat memiliki karakter visual tersendiri tanpa membuat navigasi terasa terpisah-pisah. Arah **culture and lifestyle hub** diprioritaskan; hindari mengunci narasi utama pada label “automotive”. Warna, tipografi, gaya foto, dan referensi visual belum ditentukan.
 
-Animasi harus mendukung hierarki konten dan navigasi, tetap nyaman di perangkat mobile, menjaga performa, dan menghormati preferensi `prefers-reduced-motion`.
+Motion dan interaksi diharapkan terasa sepanjang pengalaman, termasuk saat scroll, transisi antarbagian/halaman, dan interaksi elemen. Terapkan dengan sengaja: animasi harus punya fungsi naratif atau umpan balik, tidak membebani perangkat, tidak mengganggu navigasi, dan menghormati `prefers-reduced-motion`. Hindari animasi berlebihan yang membuat konten sulit dibaca.
 
 ## Prinsip kualitas
 
