@@ -55,6 +55,16 @@ Calon pelanggan, pengunjung, dan komunitas yang ingin mengetahui Bangka Garage, 
   6. **Visit / Contact** — lokasi, jam operasional, peta, kontak, dan jalur tindakan yang telah diverifikasi.
 - Sitemap dan kebutuhan halaman detail per brand masih dapat disesuaikan setelah prioritas konten dan kebutuhan pengguna dibahas.
 
+## Konsep pengalaman utama — tur Bangka Garage
+
+- Website sebaiknya terasa seperti pengunjung sedang **diajak seorang tour guide berkeliling area Bangka Garage dengan motor**, melihat dan mengenal tiap sudut/brand sepanjang perjalanan.
+- Perjalanan ini menjadi metafora interaktif untuk storytelling: pengunjung mengikuti rute yang memperkenalkan area, pengalaman, komunitas, dan cerita Bangka Garage, bukan hanya menelusuri kumpulan kartu atau daftar layanan.
+- Scroll dapat menggerakkan narasi dan suasana perjalanan secara sinematik—misalnya perpindahan antar-area, perubahan adegan, detail visual lingkungan, dan pengenalan satu demi satu brand.
+- Tour guide dapat menjadi suara pemandu melalui teks atau elemen visual; identitas/narasi pemandu, penggunaan footage motor, serta apakah pengalaman menggunakan suara atau video masih **Belum diputuskan**.
+- Pengunjung harus tetap memegang kendali: navigasi langsung ke bagian/halaman, tombol lewati, tautan yang jelas, dan scroll normal harus tetap tersedia. Hindari mengunci scroll atau membuat pengunjung menunggu animasi.
+- Pengalaman tur perlu tetap berfungsi baik tanpa video/suara, pada perangkat mobile, dengan koneksi lambat, serta bagi pengguna yang mengaktifkan `prefers-reduced-motion`.
+- Motion dan efek perjalanan harus memperkuat rasa menjelajah, tetapi tidak menutupi informasi, mengganggu keterbacaan, atau menurunkan performa.
+
 ## Storyline owner: prinsip editorial dan motion
 
 - Cerita dikembangkan dari wawancara, catatan, foto, dan fakta yang diberikan atau disetujui owner; jangan mengarang kejadian, dialog, tanggal, pencapaian, atau detail pribadi.
@@ -95,6 +105,7 @@ Motion dan interaksi diharapkan terasa sepanjang pengalaman, termasuk saat scrol
 7. Apa tindakan utama yang diinginkan dari pengunjung untuk tiap brand/komunitas: WhatsApp, telepon, petunjuk arah, booking, reservasi, atau lainnya?
 8. Apakah website ini terpisah dari aplikasi carwash/POS yang sudah ada di repository, atau nantinya perlu terhubung dengannya?
 9. Adakah referensi website atau kriteria kompetisi tertentu yang perlu diikuti?
+10. Siapa atau apa yang menjadi pemandu tur, rute area mana yang akan ditampilkan, dan apakah tur akan memakai foto/video asli, suara, atau hanya motion dan teks?
 
 ## Cara menggunakan brief
 
