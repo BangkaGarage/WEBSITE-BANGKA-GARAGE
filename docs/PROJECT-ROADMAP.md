@@ -1,12 +1,13 @@
 # Roadmap Proyek — Website Bangka Garage
 
-Dokumen ini mengubah visi proyek menjadi tahapan kerja yang dapat ditinjau dan disetujui. **Jangan melompat ke produksi sebelum tahap sebelumnya memiliki keluaran dan persetujuan yang diperlukan.** Brief utama tetap berada di `docs/PROJECT-BRIEF.md`.
+Dokumen ini mengubah visi proyek menjadi tahapan kerja yang dapat ditinjau dan disetujui. **Jangan melompat ke produksi sebelum tahap sebelumnya memiliki keluaran dan persetujuan yang diperlukan.** Brief utama berada di `docs/PROJECT-BRIEF.md`.
 
 ## Prinsip kerja
 
 - Bangka Garage diposisikan sebagai **culture & lifestyle hub**; brand induk tetap fokus utama.
 - Website **multi-page**, dengan storyline owner sebagai bagian penting dan halaman khusus.
 - Pengalaman utama mengambil metafora tur berkeliling area Bangka Garage dengan motor, dipandu karakter 3D fiktif **LYLA** (rider perempuan, suara perempuan).
+- Pemilik memutuskan website ini akan **menggantikan aplikasi POS** saat ini di repository kerja; nama repository akan diubah kemudian.
 - Referensi digunakan untuk mempelajari pola, bukan menyalin identitas, aset, tulisan, atau source code tanpa hak yang sesuai.
 - Tiap fase menghasilkan artefak yang bisa diperiksa. Pemilik proyek menyetujui keputusan sebelum fase berikutnya dimulai.
 - Motion harus bermakna, mudah dikendalikan, nyaman di mobile, aksesibel, dan memiliki fallback. Efek tidak boleh mengunci scroll atau menyembunyikan informasi.
@@ -14,18 +15,20 @@ Dokumen ini mengubah visi proyek menjadi tahapan kerja yang dapat ditinjau dan d
 
 ## Tahapan pengerjaan
 
-### Fase 0 — Amankan ruang lingkup dan repository
+### Fase 0 — Audit repository dan rencana penggantian POS
 
 **Pekerjaan**
-- Pastikan repository saat ini memang boleh dipakai untuk website publik, dan tentukan apakah aplikasi carwash/POS yang ada tetap dipertahankan atau dipisahkan.
-- Tinjau struktur, dependency, lisensi, deployment saat ini, serta apa yang sudah dipakai aplikasi.
-- Buat daftar risiko, batasan, dan keputusan teknis yang belum diketahui.
+- Audit struktur repository, fungsi aplikasi POS, dependensi, konfigurasi build/deploy, data lokal/produksi, integrasi, dan aset.
+- Identifikasi secret atau konfigurasi sensitif agar tidak ikut masuk ke source control atau deployment website.
+- Rencanakan bagaimana aplikasi POS akan diarsipkan atau dipertahankan untuk referensi dan bagaimana website mengambil alih repository. Jangan menghapus data produksi atau riwayat Git tanpa persetujuan dan rencana pemulihan.
+- Pastikan cara kerja branch dan lingkungan staging sebelum mengganti aplikasi.
 
 **Keluaran**
-- Catatan kondisi repository dan rekomendasi apakah website baru hidup berdampingan atau dipisahkan.
-- Keputusan batas proyek dan pendekatan branch/deployment.
+- Catatan kondisi repository dan inventaris aplikasi POS.
+- Rencana migrasi/pengarsipan dan rencana rollback yang disetujui.
+- Daftar risiko, batasan, serta keputusan teknis yang belum diketahui.
 
-**Gerbang persetujuan:** tidak mengubah, menghapus, atau mengganti aplikasi yang ada sebelum pemilik menyetujui batas pekerjaan.
+**Gerbang persetujuan:** keputusan mengganti aplikasi POS sudah diberikan; langkah penghapusan/arsip, penanganan data, dan deploy tetap memerlukan hasil audit dan rencana yang disetujui. Nama repository belum diubah.
 
 ### Fase 1 — Discovery bisnis, pengguna, dan tujuan
 
@@ -131,7 +134,8 @@ Dokumen ini mengubah visi proyek menjadi tahapan kerja yang dapat ditinjau dan d
 ### Fase 8 — Fondasi teknis dan implementasi bertahap
 
 **Pekerjaan**
-- Pilih stack setelah Fase 0 dan proof of concept; jangan memilih library hanya karena populer.
+- Pilih stack setelah audit dan proof of concept; GitHub menyediakan banyak project, library, engine, plugin, dan contoh, tetapi bukan berarti semuanya tepercaya, terpelihara, kompatibel, atau bebas lisensi.
+- Evaluasi tiap dependency berdasarkan kebutuhan, dokumentasi, aktivitas pemeliharaan, kompatibilitas, keamanan, lisensi, ukuran bundle, dan biaya layanan terkait. Catat pilihan dan alasan sebelum menambahkannya.
 - Siapkan arsitektur multi-page, routing, komponen, pengelolaan aset, metadata/SEO, analitik bila disetujui, serta workflow build/test.
 - Implementasikan bertahap: fondasi konten → navigasi/responsif → halaman brand → owner story → LYLA dan motion → kontak/lokasi.
 - Pisahkan scene 3D dari konten sehingga website tetap berfungsi ketika WebGL tidak tersedia.
@@ -140,6 +144,7 @@ Dokumen ini mengubah visi proyek menjadi tahapan kerja yang dapat ditinjau dan d
 - Website staging yang berjalan.
 - Komponen reusable dan instruksi menjalankan proyek.
 - Konten terhubung ke sumber data yang mudah diperbarui.
+- Daftar dependency dan lisensi yang ditinjau.
 
 **Gerbang persetujuan:** review pemilik pada milestone Home, brand pages, owner story, dan tur sebelum lanjut.
 
@@ -187,6 +192,7 @@ Ini urutan rekomendasi, bukan penghapusan fitur yang telah dibahas. Pemilik mene
 |---|---|---|
 | Tujuan culture & lifestyle hub | Disepakati | Tercatat dalam brief proyek |
 | Multi-page, Bangka Garage fokus utama | Disepakati | Storyline owner penting dengan halaman khusus |
+| Penggantian aplikasi POS di repository | Disepakati | Audit, migrasi/arsip, dan rollback direncanakan sebelum perubahan teknis; nama repo nanti |
 | Tur berkeliling dengan motor | Arah pengalaman disepakati | Rute dan materi lokasi belum dikumpulkan |
 | LYLA, rider fiktif 3D, suara perempuan | Konsep karakter disepakati | Desain, produksi, suara, dan implementasi perlu keputusan |
 | Storyline owner | Kebutuhan disepakati | Timeline faktual dan persetujuan belum tersedia |
@@ -227,9 +233,9 @@ Semua sumber di bawah merupakan **referensi untuk dipelajari**, bukan aset atau 
 
 ## Keputusan berikutnya yang dibutuhkan
 
-Untuk memulai tahapan tanpa melompat ke desain/implementasi, prioritas pertama adalah **Fase 0 dan Fase 1**:
+Pemilik telah memutuskan aplikasi POS akan digantikan oleh website dan nama repository diubah kemudian. Langkah pertama adalah **Fase 0 dan Fase 1**:
 
-1. Apakah website baru akan menggantikan aplikasi di repository, berdampingan dengannya, atau dibuat sebagai proyek terpisah?
+1. Audit aplikasi POS dan rencanakan arsip/migrasi serta rollback sebelum perubahan teknis.
 2. Informasi mana yang sudah siap dipublikasikan untuk setiap brand (alamat, jam, kontak, menu/layanan, foto/logo)?
 3. Apa tindakan utama yang paling diinginkan dari pengunjung: datang ke lokasi, WhatsApp, booking/reservasi, mengikuti media sosial, atau yang lain?
 4. Siapa yang akan diwawancarai/menyetujui storyline owner, dan adakah foto/dokumen lama yang bisa dipakai?

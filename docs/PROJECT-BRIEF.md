@@ -5,8 +5,8 @@
 ## Status
 
 - **Tahap:** discovery dan perumusan arah.
-- **Repositori kerja:** `BangkaGarage/carwash-robotic-pos` — dipakai sementara atas persetujuan pemilik proyek.
-- **Judul/nama repositori:** akan diubah nanti; jangan ubah nama repositori atau judul proyek GitHub tanpa konfirmasi tersendiri.
+- **Repositori kerja:** `BangkaGarage/carwash-robotic-pos` — digunakan sementara untuk proyek website ini.
+- **Rencana repository:** aplikasi POS yang sekarang ada akan digantikan oleh website Bangka Garage. Nama repository akan diubah kemudian; jangan mengubah nama repository sebelum waktunya.
 - **Bahasa repository saat ini:** JavaScript dan HTML. Struktur saat ini mencakup `index.html`, `styles.css`, dan `app.js`; stack ini belum tentu menjadi pilihan final untuk website baru.
 
 ## Tujuan proyek
@@ -101,10 +101,10 @@ Motion dan interaksi diharapkan terasa sepanjang pengalaman, termasuk saat scrol
 ## Batasan dan keputusan teknis
 
 - Pengerjaan serta pencatatan keputusan dilakukan di GitHub pada repository yang telah disepakati.
-- Jangan mengganti identitas/nama repository dahulu.
-- Framework, deployment/hosting, kebutuhan CMS, analitik, dan integrasi kontak: **Belum diputuskan**.
+- **Keputusan pemilik:** website Bangka Garage akan menggantikan aplikasi POS yang saat ini berada di repository kerja. Nama repository akan diubah kemudian, bukan sekarang.
+- Sebelum penggantian teknis, audit dan catat aplikasi yang ada, dependensi, konfigurasi, data, serta deployment. Jangan memublikasikan secret, menghapus data produksi, atau membuang riwayat Git tanpa persetujuan dan rencana migrasi/arsip.
+- Framework, deployment/hosting, kebutuhan CMS, analitik, dan integrasi kontak: **Belum diputuskan**. GitHub adalah tempat kerja dan sumber kode; library, engine, plugin, hosting, dan layanan eksternal tetap harus dipilih berdasarkan kebutuhan, lisensi, keamanan, performa, dan pemeliharaan.
 - Teknologi dan pipeline karakter 3D/animasi/suara LYLA: **Belum diputuskan**; pilihan harus mempertimbangkan kualitas visual, perangkat sasaran, aksesibilitas, dan performa.
-- Jangan menganggap nama repo `carwash-robotic-pos` sebagai konfirmasi bahwa website baru harus menjadi aplikasi POS. Hubungan website baru dengan aplikasi carwash/POS yang sudah ada masih perlu dikonfirmasi.
 
 ## Pertanyaan terbuka — prioritas berikutnya
 
@@ -115,11 +115,11 @@ Motion dan interaksi diharapkan terasa sepanjang pengalaman, termasuk saat scrol
 5. Di mana lokasi, bagaimana jam operasional, dan kanal kontak resmi apa yang boleh dipublikasikan untuk tiap brand?
 6. Materi apa yang sudah tersedia: logo tiap brand, foto/video asli, warna/identitas merek, testimoni, menu/daftar layanan, atau harga?
 7. Apa tindakan utama yang diinginkan dari pengunjung untuk tiap brand/komunitas: WhatsApp, telepon, petunjuk arah, booking, reservasi, atau lainnya?
-8. Apakah website ini terpisah dari aplikasi carwash/POS yang sudah ada di repository, atau nantinya perlu terhubung dengannya?
-9. Adakah referensi website atau kriteria kompetisi tertentu yang perlu diikuti?
-10. Rute area mana yang akan ditampilkan tur, dan apakah tur akan memakai foto/video asli?
-11. Bagaimana rupa, busana, kepribadian, bahasa, dan karakter suara LYLA? Siapa yang akan menyetujui desain serta naskah dan suaranya?
-12. Apakah LYLA hanya memberi narasi terarah, atau pengunjung dapat memilih rute/bertanya dan berinteraksi dengannya?
+8. Adakah referensi website atau kriteria kompetisi tertentu yang perlu diikuti?
+9. Rute area mana yang akan ditampilkan tur, dan apakah tur akan memakai foto/video asli?
+10. Bagaimana rupa, busana, kepribadian, bahasa, dan karakter suara LYLA? Siapa yang akan menyetujui desain serta naskah dan suaranya?
+11. Apakah LYLA hanya memberi narasi terarah, atau pengunjung dapat memilih rute/bertanya dan berinteraksi dengannya?
+12. Bagaimana aplikasi POS lama akan diarsipkan atau dipertahankan untuk referensi sebelum repository dialihkan sepenuhnya ke website?
 
 ## Cara menggunakan brief
 
