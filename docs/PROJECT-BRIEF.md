@@ -60,10 +60,21 @@ Calon pelanggan, pengunjung, dan komunitas yang ingin mengetahui Bangka Garage, 
 - Website sebaiknya terasa seperti pengunjung sedang **diajak seorang tour guide berkeliling area Bangka Garage dengan motor**, melihat dan mengenal tiap sudut/brand sepanjang perjalanan.
 - Perjalanan ini menjadi metafora interaktif untuk storytelling: pengunjung mengikuti rute yang memperkenalkan area, pengalaman, komunitas, dan cerita Bangka Garage, bukan hanya menelusuri kumpulan kartu atau daftar layanan.
 - Scroll dapat menggerakkan narasi dan suasana perjalanan secara sinematik—misalnya perpindahan antar-area, perubahan adegan, detail visual lingkungan, dan pengenalan satu demi satu brand.
-- Tour guide dapat menjadi suara pemandu melalui teks atau elemen visual; identitas/narasi pemandu, penggunaan footage motor, serta apakah pengalaman menggunakan suara atau video masih **Belum diputuskan**.
 - Pengunjung harus tetap memegang kendali: navigasi langsung ke bagian/halaman, tombol lewati, tautan yang jelas, dan scroll normal harus tetap tersedia. Hindari mengunci scroll atau membuat pengunjung menunggu animasi.
 - Pengalaman tur perlu tetap berfungsi baik tanpa video/suara, pada perangkat mobile, dengan koneksi lambat, serta bagi pengguna yang mengaktifkan `prefers-reduced-motion`.
 - Motion dan efek perjalanan harus memperkuat rasa menjelajah, tetapi tidak menutupi informasi, mengganggu keterbacaan, atau menurunkan performa.
+
+### Karakter pemandu tur — LYLA
+
+- Nama karakter: **LYLA**.
+- LYLA adalah **rider perempuan fiktif** dan pemandu virtual yang mengajak pengunjung menjelajahi Bangka Garage.
+- Gaya representasi yang diinginkan: karakter **3D yang terasa hidup**, bukan gambar statis; ekspresi, gestur, dan gerakannya mendukung narasi tur.
+- Suara karakter: **perempuan**. Naskah, bahasa, karakter suara, metode produksi suara, dan cakupan penggunaan masih perlu ditentukan bersama pemilik.
+- LYLA berfungsi sebagai pemandu, bukan pengganti informasi atau navigasi. Pengunjung tetap dapat melewati tur dan mengakses semua konten tanpa berinteraksi dengannya.
+- Hindari memutar suara otomatis tanpa tindakan pengguna. Sediakan kontrol untuk memulai, menjeda, mematikan, atau mengaktifkan narasi suara; informasi utama tetap tersedia dalam teks/subtitel.
+- Rupa detail, busana, helm/atribut, kepribadian, model 3D, rig/animasi, serta apakah LYLA tampil interaktif real-time atau sebagai animasi ter-render masih **Belum diputuskan**.
+- Desain karakter harus orisinal dan tidak menyalin karakter game berhak cipta atau menggunakan identitas klub/brand tanpa persetujuan yang diperlukan.
+- Implementasi 3D perlu dioptimalkan dan diuji di desktop serta perangkat mobile. Sediakan alternatif ringan/non-3D atau visual statis yang tetap menyampaikan cerita untuk perangkat yang tidak mendukung pengalaman penuh, koneksi lambat, dan pengguna reduced motion.
 
 ## Storyline owner: prinsip editorial dan motion
 
@@ -82,8 +93,8 @@ Motion dan interaksi diharapkan terasa sepanjang pengalaman, termasuk saat scrol
 ## Prinsip kualitas
 
 - Mobile-first, responsif, dan mudah dinavigasi.
-- Aksesibel: kontras yang memadai, fokus keyboard, label yang jelas, dan dukungan reduced motion.
-- Performa baik, terutama untuk gambar dan animasi.
+- Aksesibel: kontras yang memadai, fokus keyboard, label yang jelas, narasi suara opsional, subtitel/teks alternatif, dan dukungan reduced motion.
+- Performa baik, terutama untuk gambar, aset 3D, dan animasi.
 - Ajakan bertindak dan informasi penting mudah ditemukan.
 - Klaim, layanan, menu, testimoni, alamat, jam operasional, harga, serta kisah personal hanya dipublikasikan setelah dikonfirmasi/disetujui.
 
@@ -92,6 +103,7 @@ Motion dan interaksi diharapkan terasa sepanjang pengalaman, termasuk saat scrol
 - Pengerjaan serta pencatatan keputusan dilakukan di GitHub pada repository yang telah disepakati.
 - Jangan mengganti identitas/nama repository dahulu.
 - Framework, deployment/hosting, kebutuhan CMS, analitik, dan integrasi kontak: **Belum diputuskan**.
+- Teknologi dan pipeline karakter 3D/animasi/suara LYLA: **Belum diputuskan**; pilihan harus mempertimbangkan kualitas visual, perangkat sasaran, aksesibilitas, dan performa.
 - Jangan menganggap nama repo `carwash-robotic-pos` sebagai konfirmasi bahwa website baru harus menjadi aplikasi POS. Hubungan website baru dengan aplikasi carwash/POS yang sudah ada masih perlu dikonfirmasi.
 
 ## Pertanyaan terbuka — prioritas berikutnya
@@ -105,7 +117,9 @@ Motion dan interaksi diharapkan terasa sepanjang pengalaman, termasuk saat scrol
 7. Apa tindakan utama yang diinginkan dari pengunjung untuk tiap brand/komunitas: WhatsApp, telepon, petunjuk arah, booking, reservasi, atau lainnya?
 8. Apakah website ini terpisah dari aplikasi carwash/POS yang sudah ada di repository, atau nantinya perlu terhubung dengannya?
 9. Adakah referensi website atau kriteria kompetisi tertentu yang perlu diikuti?
-10. Siapa atau apa yang menjadi pemandu tur, rute area mana yang akan ditampilkan, dan apakah tur akan memakai foto/video asli, suara, atau hanya motion dan teks?
+10. Rute area mana yang akan ditampilkan tur, dan apakah tur akan memakai foto/video asli?
+11. Bagaimana rupa, busana, kepribadian, bahasa, dan karakter suara LYLA? Siapa yang akan menyetujui desain serta naskah dan suaranya?
+12. Apakah LYLA hanya memberi narasi terarah, atau pengunjung dapat memilih rute/bertanya dan berinteraksi dengannya?
 
 ## Cara menggunakan brief
 
