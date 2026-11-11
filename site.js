@@ -1,5 +1,5 @@
 const menuButton = document.querySelector('.menu-toggle');
-const navigation = document.querySelector('#primary-nav');
+const navigation = document.querySelector('#site-navigation');
 
 if (menuButton && navigation) {
   menuButton.addEventListener('click', () => {
@@ -18,5 +18,5 @@ if (menuButton && navigation) {
   });
 }
 
-const year = document.querySelector('#current-year');
-if (year) year.textContent = new Date().getFullYear();
+const currentYear = document.querySelector('#current-year');
+if (currentYear) currentYear.textContent = new Date().getFullYear();

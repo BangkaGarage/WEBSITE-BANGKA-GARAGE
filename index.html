@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#171613" />
-    <meta name="description" content="Jelajahi Bangka Garage, culture & lifestyle hub di Pangkal Pinang. Temukan Robotic Carwash, Rebel, Rebel House, Kampoeng Garage, dan Scudetto." />
-    <title>Bangka Garage — Satu Kawasan, Banyak Cerita</title>
+    <meta name="theme-color" content="#f4f1e9" />
+    <meta name="description" content="Kenali Bangka Garage, culture & lifestyle hub di Pangkal Pinang. Jelajahi unit usaha, cerita, dan informasi kunjungan." />
+    <title>Bangka Garage — Satu kawasan. Banyak cerita.</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -15,120 +15,68 @@
   <body>
     <a class="skip-link" href="#main">Langsung ke konten</a>
     <header class="site-header">
-      <a class="wordmark" href="#home" aria-label="Bangka Garage, beranda">
-        <span class="wordmark-mark" aria-hidden="true">BG</span>
-        <span>BANGKA<span class="wordmark-light">GARAGE</span></span>
-      </a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Buka navigasi">
-        <span></span><span></span>
-      </button>
-      <nav class="primary-nav" id="primary-nav" aria-label="Navigasi utama">
-        <a href="#experience">Pengalaman</a>
-        <a href="#story">Cerita</a>
-        <a href="#visit">Lokasi</a>
-        <a class="nav-cta" href="#businesses">Jelajahi kawasan <span aria-hidden="true">↗</span></a>
-      </nav>
+      <div class="container nav">
+        <a class="brand" href="#home" aria-label="Bangka Garage, beranda"><span class="brand-mark" aria-hidden="true">BG</span><span>BANGKA <span class="brand-light">GARAGE</span></span></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Buka navigasi"><span></span><span></span></button>
+        <nav class="nav-links" id="site-navigation" aria-label="Navigasi utama">
+          <a href="#about">Tentang</a><a href="#units">Unit usaha</a><a href="#story">Cerita</a><a href="#visit">Kunjungi</a>
+          <a class="nav-cta" href="#units">Jelajahi kawasan <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
     </header>
 
     <main id="main">
       <section class="hero" id="home" aria-labelledby="hero-title">
-        <div class="hero-texture" aria-hidden="true"></div>
-        <div class="hero-copy">
-          <p class="eyebrow"><span class="eyebrow-line"></span> PANGKAL PINANG · BANGKA BELITUNG</p>
-          <h1 id="hero-title">Satu kawasan.<br /><span>Banyak cerita.</span></h1>
-          <p class="hero-description">Culture, lifestyle, dan otomotif bertemu di Bangka Garage—ruang untuk menjelajah, menikmati waktu, dan menemukan pengalaman yang berbeda.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#businesses">Jelajahi kawasan <span aria-hidden="true">↗</span></a>
-            <a class="button button-text" href="#visit">Temukan lokasi <span aria-hidden="true">↓</span></a>
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="eyebrow-line"></span>PANGKAL PINANG · BANGKA BELITUNG</p>
+            <h1 id="hero-title">Satu kawasan.<br /><em>Banyak cerita.</em></h1>
+            <p class="hero-lede">Culture, lifestyle, dan otomotif bertemu di Bangka Garage—ruang untuk menjelajah, menikmati waktu, dan menemukan pengalaman yang berbeda.</p>
+            <div class="hero-actions"><a class="button button-primary" href="#units">Jelajahi kawasan <span aria-hidden="true">↘</span></a><a class="text-link" href="#visit">Temukan lokasi <span aria-hidden="true">↗</span></a></div>
+            <p class="hero-footnote"><span class="status-dot"></span> Culture &amp; lifestyle hub di Pulau Bangka</p>
           </div>
-          <div class="hero-note"><span class="live-dot"></span> Culture &amp; lifestyle hub</div>
-        </div>
-        <div class="hero-art" aria-hidden="true">
-          <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
-          <div class="art-sun"></div>
-          <div class="art-garage">
-            <div class="garage-roof"></div>
-            <div class="garage-body"><div class="garage-sign">BANGKA<br /><b>GARAGE</b></div><div class="garage-opening"><i></i><i></i><i></i><i></i></div></div>
-            <div class="garage-ground"></div>
+          <div class="hero-art" role="img" aria-label="Ilustrasi abstrak kawasan Bangka Garage">
+            <div class="art-grid"></div><div class="sun-disc"></div><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+            <div class="garage"><div class="garage-roof"></div><div class="garage-front"><span class="garage-word">BANGKA<br /><strong>GARAGE</strong></span><span class="garage-door"><i></i><i></i><i></i><i></i><i></i></span></div></div>
+            <span class="art-caption">AREA 01 <span>—</span> PANGKAL PINANG</span><span class="art-stamp">BANGKA<br />BELITUNG</span>
           </div>
-          <div class="art-caption"><span>01 / 05</span><span>THE PLACE TO GATHER</span></div>
-          <div class="art-stamp">BANGKA<br />BELITUNG</div>
         </div>
-        <div class="hero-bottom"><span>SCROLL UNTUK MENJELAJAH</span><span class="scroll-line"></span><span>01 — 05</span></div>
+        <div class="container hero-bottom"><span>JELAJAHI KAWASAN</span><span class="scroll-rule"></span><span>01 — 05</span></div>
       </section>
 
-      <section class="intro section-pad" id="experience" aria-labelledby="intro-title">
-        <div class="section-kicker"><span>01</span> TENTANG BANGKA GARAGE</div>
-        <div class="intro-grid">
-          <h2 id="intro-title">Lebih dari sekadar<br />tempat untuk <em>singgah.</em></h2>
-          <div class="intro-copy">
-            <p>Bangka Garage menghadirkan beragam unit usaha dan ruang berkumpul dalam satu kawasan. Dari merawat kendaraan hingga menikmati kopi dan waktu bersama, setiap unit punya pengalaman dan jam layanannya sendiri.</p>
-            <a class="inline-link" href="#businesses">Kenali setiap pengalaman <span aria-hidden="true">↗</span></a>
-          </div>
+      <section class="intro section-pad" id="about" aria-labelledby="about-title">
+        <div class="container">
+          <div class="section-label"><span>01</span> TENTANG BANGKA GARAGE</div>
+          <div class="intro-grid"><h2 id="about-title">Lebih dari sekadar<br />tempat untuk <em>singgah.</em></h2><div class="intro-copy"><p>Bangka Garage menghadirkan beragam unit usaha dan ruang berkumpul dalam satu kawasan. Dari merawat kendaraan hingga menikmati kopi dan waktu bersama, setiap unit punya pengalaman dan jam layanannya sendiri.</p><a class="inline-link" href="#units">Kenali setiap pengalaman <span aria-hidden="true">↗</span></a></div></div>
+          <div class="intro-note"><span></span> BANGKA GARAGE · PANGKAL PINANG</div>
         </div>
-        <div class="intro-rule"><span></span><span>BERADA DI PANGKAL PINANG, PULAU BANGKA</span></div>
       </section>
 
-      <section class="businesses section-pad" id="businesses" aria-labelledby="businesses-title">
-        <div class="section-heading">
-          <div><div class="section-kicker"><span>02</span> JELAJAHI KAWASAN</div><h2 id="businesses-title">Pilih cara Anda<br /><em>menikmati Bangka Garage.</em></h2></div>
-          <p>Lima unit, beragam suasana. Temukan tempat yang sesuai dengan rencana Anda hari ini.</p>
-        </div>
-        <div class="business-grid">
-          <article class="business-card card-wash">
-            <div class="card-top"><span class="card-number">01</span><span class="card-icon" aria-hidden="true">↗</span></div>
-            <div class="card-illustration wash-illustration" aria-hidden="true"><span class="wash-ring"></span><span class="wash-car">CAR<br />WASH</span><span class="wash-drop">✳</span></div>
-            <div class="card-content"><p class="card-category">AUTO CARE</p><h3>Robotic Carwash</h3><p>Carwash &amp; Motorwash untuk kendaraan Anda.</p><div class="card-hours"><span>MIN–JUM</span><strong>07.30–20.30</strong><span>SAB</span><strong>07.30–17.00</strong></div><a class="card-link" href="https://wa.me/628117179892" target="_blank" rel="noopener noreferrer">Hubungi Robotic Carwash <span aria-hidden="true">↗</span></a></div>
-          </article>
-
-          <article class="business-card card-rebel">
-            <div class="card-top"><span class="card-number">02</span><span class="card-icon" aria-hidden="true">↗</span></div>
-            <div class="card-illustration rebel-illustration" aria-hidden="true"><span class="coffee-steam"></span><span class="coffee-cup">R</span><span class="coffee-saucer"></span></div>
-            <div class="card-content"><p class="card-category">CAFE · BARBER · COMING IN DEVELOPMENT</p><h3>Rebel</h3><p>Cafe, barber, dan mini cinema yang sedang dalam pembangunan.</p><div class="card-hours"><span>CAFE</span><strong>07.30–23.00</strong><span>BARBER</span><strong>10.00–22.00</strong></div><p class="coming-note">Mini cinema direncanakan hadir pada 2027. Tanggal pembukaan belum diumumkan.</p><div class="card-links"><a class="card-link" href="https://wa.me/628117113536" target="_blank" rel="noopener noreferrer">Hubungi Cafe <span aria-hidden="true">↗</span></a><a class="card-link" href="https://wa.me/628117287337" target="_blank" rel="noopener noreferrer">Hubungi Barber <span aria-hidden="true">↗</span></a></div></div>
-          </article>
-
-          <article class="business-card card-house">
-            <div class="card-top"><span class="card-number">03</span><span class="card-icon" aria-hidden="true">↗</span></div>
-            <div class="card-illustration house-illustration" aria-hidden="true"><span class="house-moon"></span><span class="house-window">RH</span><span class="house-light"></span></div>
-            <div class="card-content"><p class="card-category">COFFEESHOP &amp; BAR</p><h3>Rebel House</h3><p>Tempat untuk menikmati kopi, minuman, dan waktu bersama.</p><div class="card-hours"><span>SETIAP HARI</span><strong>08.00–00.00</strong></div><div class="card-links"><a class="card-link" href="https://instagram.com/rebelhouse86" target="_blank" rel="noopener noreferrer">Instagram @rebelhouse86 <span aria-hidden="true">↗</span></a><a class="card-link" href="https://wa.me/628117113536" target="_blank" rel="noopener noreferrer">Hubungi Rebel House <span aria-hidden="true">↗</span></a></div></div>
-          </article>
-
-          <article class="business-card card-kampoeng">
-            <div class="card-top"><span class="card-number">04</span><span class="card-icon" aria-hidden="true">↗</span></div>
-            <div class="card-illustration kampoeng-illustration" aria-hidden="true"><span class="wheel wheel-back"></span><span class="wheel wheel-front"></span><span class="bike-line"></span><span class="bike-tank">KG</span></div>
-            <div class="card-content"><p class="card-category">MOTORCYCLE WORKSHOP</p><h3>Kampoeng Garage</h3><p>H-D Specialist &amp; Parts.</p><div class="card-hours"><span>SEN–SAB</span><strong>08.00–17.00</strong><span>MINGGU</span><strong>TUTUP</strong></div><a class="card-link" href="https://wa.me/6282280191176" target="_blank" rel="noopener noreferrer">Hubungi Kampoeng Garage <span aria-hidden="true">↗</span></a></div>
-          </article>
-
-          <article class="business-card card-scudetto">
-            <div class="card-top"><span class="card-number">05</span><span class="card-icon" aria-hidden="true">↗</span></div>
-            <div class="card-illustration scudetto-illustration" aria-hidden="true"><span class="detail-star">✳</span><span class="detail-surface"></span><span class="detail-sheen"></span></div>
-            <div class="card-content"><p class="card-category">AUTO FINISHING</p><h3>Scudetto</h3><p>Coating &amp; Detailing untuk kendaraan.</p><div class="card-hours"><span>SEN–SAB</span><strong>08.00–17.00</strong><span>MINGGU</span><strong>TUTUP</strong></div><a class="card-link" href="https://wa.me/628536330633" target="_blank" rel="noopener noreferrer">Hubungi Scudetto <span aria-hidden="true">↗</span></a></div>
-          </article>
+      <section class="units section-pad" id="units" aria-labelledby="units-title">
+        <div class="container">
+          <div class="section-label"><span>02</span> JELAJAHI KAWASAN</div>
+          <div class="section-heading"><h2 id="units-title">Pilih cara Anda<br /><em>menikmati Bangka Garage.</em></h2><p>Lima unit, beragam suasana. Temukan tempat yang sesuai dengan rencana Anda hari ini.</p></div>
+          <div class="unit-grid">
+            <article class="unit-card unit-wash"><div class="unit-art art-wash" aria-hidden="true"><span class="art-label">AUTO CARE / 01</span><span class="wash-symbol">✳</span><span class="wash-type">CAR<br />WASH</span></div><div class="unit-body"><p class="unit-category">CARWASH &amp; MOTORWASH</p><h3>Robotic Carwash</h3><p class="unit-description">Layanan cuci mobil dan motor di kawasan Bangka Garage.</p><dl class="hours"><div><dt>Minggu–Jumat</dt><dd>07.30–20.30</dd></div><div><dt>Sabtu</dt><dd>07.30–17.00</dd></div></dl><a class="unit-link" href="https://wa.me/628117179892" target="_blank" rel="noopener noreferrer">Hubungi unit <span aria-hidden="true">↗</span></a></div></article>
+            <article class="unit-card unit-rebel"><div class="unit-art art-rebel" aria-hidden="true"><span class="art-label">CAFE · BARBER · MINI CINEMA / 02</span><span class="rebel-cup">R</span><span class="rebel-saucer"></span></div><div class="unit-body"><p class="unit-category">CAFE · BARBER · MINI CINEMA</p><h3>Rebel</h3><p class="unit-description">Cafe dan barber, dengan mini cinema yang masih dalam pembangunan.</p><dl class="hours"><div><dt>Cafe · setiap hari</dt><dd>07.30–23.00</dd></div><div><dt>Barber · setiap hari</dt><dd>10.00–22.00</dd></div></dl><p class="unit-note">Mini cinema direncanakan hadir pada 2027; tanggal pembukaan belum diumumkan.</p><div class="unit-links"><a class="unit-link" href="https://wa.me/628117113536" target="_blank" rel="noopener noreferrer">Hubungi cafe <span aria-hidden="true">↗</span></a><a class="unit-link" href="https://wa.me/628117287337" target="_blank" rel="noopener noreferrer">Hubungi barber <span aria-hidden="true">↗</span></a></div></div></article>
+            <article class="unit-card unit-house"><div class="unit-art art-house" aria-hidden="true"><span class="art-label">COFFEESHOP &amp; BAR / 03</span><span class="house-moon"></span><span class="house-sign">REBEL<br />HOUSE</span></div><div class="unit-body"><p class="unit-category">COFFEESHOP &amp; BAR</p><h3>Rebel House</h3><p class="unit-description">Tempat untuk menikmati kopi, minuman, dan waktu bersama.</p><dl class="hours"><div><dt>Setiap hari</dt><dd>08.00–00.00</dd></div></dl><div class="unit-links"><a class="unit-link" href="https://instagram.com/rebelhouse86" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a><a class="unit-link" href="https://wa.me/628117113536" target="_blank" rel="noopener noreferrer">Hubungi unit <span aria-hidden="true">↗</span></a></div></div></article>
+            <article class="unit-card unit-kampoeng"><div class="unit-art art-kampoeng" aria-hidden="true"><span class="art-label">H-D SPECIALIST &amp; PARTS / 04</span><span class="bike-wheel wheel-one"></span><span class="bike-wheel wheel-two"></span><span class="bike-frame"></span><span class="bike-tank">KG</span></div><div class="unit-body"><p class="unit-category">H-D SPECIALIST &amp; PARTS</p><h3>Kampoeng Garage</h3><p class="unit-description">Spesialis Harley-Davidson dan parts.</p><dl class="hours"><div><dt>Senin–Sabtu</dt><dd>08.00–17.00</dd></div><div><dt>Minggu</dt><dd>Tutup</dd></div></dl><a class="unit-link" href="https://wa.me/6282280191176" target="_blank" rel="noopener noreferrer">Hubungi unit <span aria-hidden="true">↗</span></a></div></article>
+            <article class="unit-card unit-scudetto"><div class="unit-art art-scudetto" aria-hidden="true"><span class="art-label">COATING &amp; DETAILING / 05</span><span class="detail-star">✳</span><span class="detail-car"></span><span class="detail-glint"></span></div><div class="unit-body"><p class="unit-category">COATING &amp; DETAILING</p><h3>Scudetto</h3><p class="unit-description">Layanan coating dan detailing kendaraan.</p><dl class="hours"><div><dt>Senin–Sabtu</dt><dd>08.00–17.00</dd></div><div><dt>Minggu</dt><dd>Tutup</dd></div></dl><a class="unit-link" href="https://wa.me/628536330633" target="_blank" rel="noopener noreferrer">Hubungi unit <span aria-hidden="true">↗</span></a></div></article>
+          </div>
         </div>
       </section>
 
       <section class="story section-pad" id="story" aria-labelledby="story-title">
-        <div class="story-mark" aria-hidden="true">BG<br /><span>86</span></div>
-        <div class="story-content"><div class="section-kicker"><span>03</span> CERITA BANGKA GARAGE</div><h2 id="story-title">Perjalanan yang<br /><em>pulang ke Bangka.</em></h2><p>Tentang mimpi masa muda, masa-masa sulit, kesempatan untuk pulih, pengalaman merantau, dan gagasan yang akhirnya dibangun di tanah asal.</p><a class="button button-light" href="https://bangkagarage.com/baru/cerita/" target="_blank" rel="noopener noreferrer">Baca cerita owner <span aria-hidden="true">↗</span></a></div>
-        <div class="story-side-note">DARI BELINYU<br />MENUJU BANGKA GARAGE</div>
+        <div class="container story-grid"><div class="story-watermark" aria-hidden="true">BG</div><div class="story-copy"><div class="section-label"><span>03</span> CERITA OWNER</div><h2 id="story-title">Perjalanan yang<br /><em>pulang ke Bangka.</em></h2><p>Bangka Garage lahir dari perjalanan panjang—tentang mimpi masa muda, masa-masa sulit, kesempatan untuk pulih, pengalaman merantau, dan gagasan yang akhirnya dibangun di tanah asal.</p><a class="button button-light" href="https://bangkagarage.com/baru/cerita/" target="_blank" rel="noopener noreferrer">Baca cerita owner <span aria-hidden="true">↗</span></a><p class="story-note">Kisah lengkap bersumber dari cerita owner dan perlu ditinjau kembali sebelum publikasi final.</p></div><div class="story-side">SEBUAH PERJALANAN<br />YANG TERUS BERLANJUT</div></div>
       </section>
 
       <section class="visit section-pad" id="visit" aria-labelledby="visit-title">
-        <div class="section-kicker"><span>04</span> KUNJUNGI KAMI</div>
-        <div class="visit-grid">
-          <div><h2 id="visit-title">Sampai jumpa<br /><em>di Bangka.</em></h2><p class="visit-address">Jl. Solihin GP No.7, Melintang,<br />Kec. Rangkui, Kota Pangkal Pinang,<br />Kepulauan Bangka Belitung 33684</p><a class="button button-primary" href="https://www.google.com/maps/search/?api=1&query=Jl.+Solihin+GP+No.7%2C+Melintang%2C+Kec.+Rangkui%2C+Kota+Pangkal+Pinang%2C+Kepulauan+Bangka+Belitung+33684" target="_blank" rel="noopener noreferrer">Buka petunjuk arah <span aria-hidden="true">↗</span></a></div>
-          <div class="visit-panel"><span class="visit-panel-index">PANGKAL PINANG · BANGKA BELITUNG</span><div class="map-art" aria-hidden="true"><span class="map-road road-a"></span><span class="map-road road-b"></span><span class="map-road road-c"></span><span class="map-pin"><i></i></span><span class="map-label">BANGKA<br />GARAGE</span></div><a class="social-link" href="https://instagram.com/bangka_garage86" target="_blank" rel="noopener noreferrer"><span>Ikuti perjalanan kami</span><strong>@bangka_garage86 ↗</strong></a></div>
-        </div>
+        <div class="container"><div class="section-label"><span>04</span> KUNJUNGI KAMI</div><div class="visit-grid"><div class="visit-copy"><h2 id="visit-title">Sampai jumpa<br /><em>di Bangka.</em></h2><p>Jl. Solihin GP No.7, Melintang,<br />Kec. Rangkui, Kota Pangkal Pinang,<br />Kepulauan Bangka Belitung 33684</p><a class="button button-primary" href="https://www.google.com/maps/search/?api=1&query=Jl.+Solihin+GP+No.7%2C+Melintang%2C+Kec.+Rangkui%2C+Kota+Pangkal+Pinang%2C+Kepulauan+Bangka+Belitung+33684" target="_blank" rel="noopener noreferrer">Cari rute <span aria-hidden="true">↗</span></a></div><div class="visit-panel"><span class="visit-kicker">PANGKAL PINANG · PULAU BANGKA</span><div class="map-illustration" aria-hidden="true"><span class="map-road map-road-a"></span><span class="map-road map-road-b"></span><span class="map-road map-road-c"></span><span class="map-pin"></span><span class="map-name">BANGKA<br />GARAGE</span></div><a class="social-link" href="https://instagram.com/bangka_garage86" target="_blank" rel="noopener noreferrer"><span>Ikuti perjalanan kami</span><strong>@bangka_garage86 ↗</strong></a></div></div></div>
       </section>
 
-      <section class="closing-cta"><p class="eyebrow">BANGKA GARAGE</p><h2>Temukan pengalaman<br />Anda di <em>sini.</em></h2><a class="button button-primary" href="#businesses">Jelajahi unit usaha <span aria-hidden="true">↑</span></a></section>
+      <section class="closing-cta"><p class="eyebrow">BANGKA GARAGE · PANGKAL PINANG</p><h2>Temukan pengalaman<br />Anda di <em>sini.</em></h2><a class="button button-primary" href="#units">Jelajahi unit usaha <span aria-hidden="true">↑</span></a></section>
     </main>
 
-    <footer class="site-footer">
-      <a class="wordmark footer-wordmark" href="#home"><span class="wordmark-mark" aria-hidden="true">BG</span><span>BANGKA<span class="wordmark-light">GARAGE</span></span></a>
-      <p>Satu kawasan. Banyak cerita.</p>
-      <a class="footer-instagram" href="https://instagram.com/bangka_garage86" target="_blank" rel="noopener noreferrer">Instagram @bangka_garage86 ↗</a>
-      <span class="footer-copy">© <span id="current-year">2026</span> Bangka Garage</span>
-    </footer>
+    <footer class="site-footer"><div class="container footer-inner"><a class="brand" href="#home"><span class="brand-mark" aria-hidden="true">BG</span><span>BANGKA <span class="brand-light">GARAGE</span></span></a><p>Satu kawasan. Banyak cerita.</p><a href="https://instagram.com/bangka_garage86" target="_blank" rel="noopener noreferrer">Instagram @bangka_garage86 ↗</a><small>© <span id="current-year">2026</span> Bangka Garage</small></div></footer>
   </body>
 </html>
