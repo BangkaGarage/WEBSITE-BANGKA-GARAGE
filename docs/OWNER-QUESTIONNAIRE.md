@@ -1,141 +1,81 @@
 # Kuesioner Owner — Cerita Bangka Garage dan Informasi Website
 
-> **Cara pakai:** isi hanya informasi yang nyaman dibagikan. Jawaban ini menjadi bahan discovery, bukan otomatis konten publik. Setiap fakta, kutipan, foto, nama, tanggal, dan kisah pribadi akan ditinjau serta disetujui sebelum dipublikasikan.
->
-> **Privasi:** jangan masukkan password, nomor identitas, data keuangan, alamat rumah, atau data pribadi pihak lain yang tidak diperlukan. Untuk pertanyaan sensitif, boleh menjawab “lewati” atau “hanya untuk konteks, jangan dipublikasikan”.
+> Dokumen ini mencatat jawaban owner untuk discovery. Sumber cerita utama sudah diberikan melalui halaman [bangkagarage.com/baru/cerita/](https://bangkagarage.com/baru/cerita/) dan isi lengkap di percakapan proyek. Ini bukan izin untuk menambah fakta yang tidak ada di sumber.
 
-## A. Persetujuan dan batas cerita
+## A. Persetujuan dan batas cerita — dijawab
 
-- Nama/jabatan yang boleh dipakai di website: **Belum diisi**
-- Apakah cerita owner boleh dipublikasikan? **Belum dikonfirmasi**
-- Nama asli, nama panggilan, atau nama samaran yang diinginkan: **Belum diputuskan**
-- Topik atau periode yang boleh diceritakan: **Belum diisi**
-- Topik, nama orang, atau detail yang tidak boleh dipublikasikan: **Belum diisi**
-- Siapa yang akan meninjau dan memberi persetujuan final sebelum rilis? **Belum diisi**
-- Apakah kutipan langsung boleh digunakan setelah ditinjau? **Belum dikonfirmasi**
+- Apakah cerita boleh digunakan kembali di website baru? **Ya. Owner menyatakan cerita pada halaman yang diberikan sudah sesuai permintaan dan disetujui untuk digunakan kembali.**
+- Penanganan kisah pribadi yang ada di sumber: **Cerita real apa adanya, tampilkan semua.** Ini mencakup kisah masa sulit terkait kesehatan/pemulihan, penggunaan obat-obatan terlarang, utang, pengalaman kerja/usaha, serta kemitraan sebagaimana tertulis.
+- Prinsip penyuntingan: jaga fakta dan maksud, jangan sensasional, jangan menambah detail, dan atribusikan pernyataan tentang pihak lain sebagai penuturan/pengalaman owner. Naskah final tetap perlu ditinjau sebelum publikasi.
+- Nama/jabatan owner yang ingin ditampilkan: **Belum diisi**.
+- Bagian/identitas pihak lain yang harus disamarkan atau ditinjau: **Belum diisi**.
 
-## B. Perjalanan hidup — bahan timeline
+## B. Sumber cerita dan timeline awal — sudah tersedia
 
-Tidak harus menjawab semua pertanyaan sekaligus. Perkiraan tahun boleh digunakan saat tanggal pasti tidak diingat; setiap tanggal akan diverifikasi sebelum diterbitkan.
+Gunakan naskah halaman cerita sebagai sumber utama, jangan meminta owner mengulangnya. Urutan bab dari sumber:
 
-### Masa kecil dan latar awal
+1. **Sebuah Film, Sebuah Motor, dan Mimpi Masa Muda** — kecintaan pada motor bermula dari *The Legend of Speed* dan Honda NSR Repsol yang diidamkan; pengalaman mengikuti balap liar motor drag; sepupu menggunakan Harley-Davidson; owner mulai mempelajari sejarah dan motor Harley-Davidson.
+2. **Jakarta, Masa Sulit, dan Orang Tua yang Terus Mendukung** — dari Belinyu ke Jakarta untuk sekolah dan tinggal bersama paman; menurut penuturan owner mengalami penggunaan obat-obatan terlarang, serangan jantung, trauma, dan koma lebih dari satu bulan; masa perawatan dan rehabilitasi di rumah; utang sekitar Rp80 jutaan kepada rentenir di Jakarta yang penagihannya sampai ke Belinyu; tekad pulih dan memperbaiki kepercayaan orang tua.
+3. **Malaysia dan Shanghai: Belajar Melalui Kehidupan Sehari-hari** — pendidikan di Malaysia selama enam tahun sambil bekerja sebagai pramusaji restoran India, berjualan bunga di tepi jalan, dan bekerja di pabrik Proton; ia menyatakan tuduhan pencurian tidak benar dan memilih mengundurkan diri; kemudian pendidikan tiga tahun di Shanghai dan restoran Padang bersama sepupu yang akhirnya tutup; pulang ke Belinyu.
+4. **Tahun 2013: Harley Pertama dan Inspirasi di Sepanjang Jalan** — membeli Harley-Davidson Sportster Forty-Eight dari showroom Mabua; touring Eropa Barat bersama teman dari Munich ke Paris; melihat workshop motor besar dengan kafe; inspirasi dari pengalaman perjalanan dan tontonan *Sons of Anarchy*.
+5. **Modal Sudah Ada, Rencana Kembali Diuji** — pada 2020 modal pembangunan tersedia; calon investor dari China dan CV tiga orang; menurut owner, kerja sama menyimpang dari tujuan awal dan ia merasa tertipu; kerja sama dibubarkan, ia meneruskan rencana sendiri; pandemi menyebabkan penundaan hampir dua tahun; pembangunan dimulai sekitar pertengahan 2022.
+6. **Nama yang Menyatukan Perjalanan dan Kampung Halaman** — lahan bekas bengkel las truk dan cuci truk diambil kembali/ditata; sumur tua dipertahankan; “Garage” berasal dari impian memiliki garasi dan “Bangka” dari pulau asal serta tempat membangun.
+7. **Satu demi Satu, Kawasan Ini Mulai Hidup** — pencarian layanan mobil dan motor, pembahasan/kesepakatan dengan SATO Robotic Carwash; unit pertama mulai beroperasi pada 2023; perkembangan barber dan cafe/Rebel; kemudian Rebel House untuk berkumpul, musik, billiard dan berbagi cerita; Kampoeng Garage; Scudetto Auto Detailing dikembangkan bersama Scudetto dan Flux.
+8. **Belajar Membangun Orang-orang di Dalamnya** — tim banyak memulai tanpa pengalaman dan belajar sambil bekerja; tantangan fisik di carwash; warga lokal bekerja dan tumbuh bersama kawasan.
+9. **Jejak Pribadi yang Menjadi Bagian dari Tempat Ini** — lencana berisi Jeep Rubicon oranye, mesin V-twin sebagai simbol kecintaan pada Harley-Davidson, angka 86 sebagai angka keberuntungan; semangat One For All; dokumentasi Rolling Thunder, NovemBeer, malam tahun baru, konser Roy Jeconiah × Boomerang; motor custom Iron Man karya Om Bingky — Carburator Springs/Bikers Station pada 2026; membeli NSR pada 2026.
+10. **Perjalanan yang Masih Terbuka** — pengembangan Bangka Garage berlanjut; mini cinema masih dalam pembangunan dan direncanakan hadir pada 2027, tanpa tanggal pembukaan resmi; harapan membawa nama Pulau Bangka lebih luas.
 
-1. Di mana dan dalam suasana seperti apa Anda tumbuh? (Tidak perlu memberi alamat pribadi.)
-2. Nilai, orang, tempat, atau pengalaman apa yang paling membentuk Anda?
-3. Kapan minat pada motor, mobil, usaha, komunitas, atau hospitality mulai tumbuh?
-4. Apakah ada cita-cita atau bayangan masa depan yang masih Anda ingat?
-5. Foto, benda, atau kenangan apa yang boleh membantu menggambarkan periode ini?
+### Catatan verifikasi editorial
 
-### Awal perjalanan dan tantangan
+- Informasi di atas adalah ringkasan dari narasi owner, bukan verifikasi independen.
+- Cocokkan tahun, angka, ejaan nama, jalur pendidikan, nama bisnis/mitra, dan klaim seperti “yang pertama di Pangkal Pinang” dengan owner sebelum publikasi.
+- Detail medis, pemulihan, penggunaan obat, utang, tuduhan, dan kemitraan ditulis dengan hormat dan akurat. Untuk klaim tentang pihak lain, gunakan atribusi “menurut penuturan owner/owner menceritakan” dan jangan mengubahnya menjadi pernyataan fakta yang telah diverifikasi secara independen.
+- Jangan menambahkan nama, dialog, tanggal, motif, diagnosis, atau kejadian yang tidak ada di sumber.
 
-6. Apa pekerjaan atau usaha pertama yang relevan dengan perjalanan Anda?
-7. Bagaimana ide Bangka Garage pertama kali muncul? Kapan kira-kira dan dalam konteks apa?
-8. Apa tantangan terbesar yang bersedia Anda ceritakan? Apa dampaknya terhadap Anda atau usaha?
-9. Apakah ada kegagalan, kehilangan, penolakan, atau masa sulit yang menjadi titik balik dan memang ingin dibagikan?
-10. Dukungan, keputusan, kebiasaan, atau pelajaran apa yang membantu Anda melewati masa tersebut?
-11. Apakah ada orang lain yang perlu disebut? Jika ya, apakah mereka menyetujui penyebutan dan kutipannya?
+## C. Struktur brand/unit usaha — diklarifikasi
 
-### Membangun Bangka Garage dan ekosistem brand
+**Brand induk:** BANGKA GARAGE.
 
-12. Apa arti nama “Bangka Garage” bagi Anda?
-13. Apa tujuan awal membangun Bangka Garage? Apakah tujuan itu berubah seiring waktu?
-14. Bagaimana setiap brand lahir dan apa peran/cerita di baliknya?
-    - Robotic Carwash: **Belum diisi**
-    - Rebel (Cafe, Barber, Mini Cinema yang akan hadir): **Belum diisi**
-    - Rebel House: **Belum diisi**
-    - Kampoeng Garage: **Belum diisi**
-    - Scudetto Auto Detailing: **Belum diisi**
-15. Apa hubungan Club House Rebellion MC 13 Indonesia dengan Bangka Garage? Apa yang boleh diceritakan secara publik?
-16. Momen apa yang paling membanggakan? Adakah bukti/foto dan tanggal perkiraan yang dapat diverifikasi?
-17. Apa prinsip atau budaya yang ingin dirasakan pengunjung ketika berada di Bangka Garage?
+Unit usaha di dalam area Bangka Garage:
 
-### Hari ini dan masa depan
+| Unit | Cakupan yang dikonfirmasi | Catatan |
+|---|---|---|
+| Robotic Carwash | Cuci mobil robotic |  |
+| Rebel | Cafe, barber, mini cinema | Mini cinema sedang dibangun; direncanakan hadir 2027, tanggal resmi belum ada |
+| Rebel House | Menu sama dengan Rebel Cafe, ditambah minuman bir dan live music setiap malam | Verifikasi informasi operasional sebelum dipublikasikan |
+| Kampoeng Garage | H-D specialist & parts; motor CC besar; parts dan apparel | Detail layanan/produk lengkap menunggu konfirmasi |
+| Scudetto Auto Detailing | Detailing, coating, interior, dan layanan perawatan mobil lainnya |  |
 
-18. Apa arti Bangka Garage bagi Anda hari ini?
-19. Apa yang masih menjadi tantangan atau pekerjaan yang belum selesai? (Boleh dilewati.)
-20. Apa visi Anda untuk Bangka Garage dan komunitasnya ke depan?
-21. Pesan apa yang ingin Anda sampaikan kepada orang yang sedang menghadapi masa sulit atau sedang membangun sesuatu?
-22. Bagaimana Anda ingin pembaca merasa atau bertindak setelah membaca kisah ini?
+**Bukan unit usaha:** **REBELLION MC INDONESIA** — club house/club lokal Bangka Belitung, Kota Pangkal Pinang. Nama dan status usaha diklarifikasi owner. Hubungan resmi/izin penggunaan identitas club di website perlu dipastikan.
 
-## C. Pemeriksaan fakta untuk tiap momen cerita
+Nama Barbertopia yang muncul di versi cerita lama tidak dimasukkan sebagai brand terpisah dalam struktur terkini, kecuali owner mengonfirmasi sebaliknya.
 
-Salin tabel ini untuk setiap momen yang ingin dipertimbangkan.
+## D. Data bisnis publik — masih perlu diisi
 
-| Isian | Jawaban |
-|---|---|
-| Judul momen / bab sementara |  |
-| Tahun/periode (perkiraan jika perlu) |  |
-| Apa yang terjadi (fakta yang dapat diverifikasi) |  |
-| Mengapa momen ini penting |  |
-| Apa yang berubah/pelajaran yang didapat |  |
-| Bukti pendukung (foto/dokumen; catat lokasi aman, jangan unggah materi sensitif) |  |
-| Orang lain yang terlibat dan status izin |  |
-| Boleh dipublikasikan? (ya/tidak/perlu review) |  |
-| Catatan privasi/koreksi |  |
+- Deskripsi singkat Bangka Garage yang disetujui: **Belum diisi**
+- Alamat bisnis, peta, jam operasional, telepon/WhatsApp, sosial media: **Belum diisi**
+- CTA utama: datang / WhatsApp / telepon / booking / sosial / lainnya — **Belum dipilih**
+- Daftar layanan/menu/harga tiap unit: **Belum diisi**
+- Informasi/identitas yang boleh ditampilkan untuk REBELLION MC INDONESIA: **Belum dikonfirmasi**
 
-## D. Data bisnis yang mungkin ditampilkan di website
+## E. Aset dan izin
 
-Isi data resmi atau beri tanda “belum siap”. Informasi berikut baru ditampilkan setelah diverifikasi.
-
-### Informasi Bangka Garage
-
-- Deskripsi singkat yang disetujui: **Belum diisi**
-- Lokasi/alamat bisnis yang boleh dipublikasikan: **Belum diisi**
-- Tautan peta resmi: **Belum diisi**
-- Jam operasional: **Belum diisi**
-- Nomor telepon/WhatsApp publik: **Belum diisi**
-- Website atau media sosial resmi: **Belum diisi**
-- Tindakan utama yang diinginkan pengunjung: datang / WhatsApp / telepon / booking / sosial / lainnya — **Belum dipilih**
-
-### Per brand
-
-Isi satu tabel untuk setiap brand. Tambahkan baris bila perlu.
-
-| Brand | Layanan/produk yang boleh ditampilkan | Lokasi/jam/kontak khusus? | CTA utama | Foto/logo/menu/harga tersedia dan boleh dipakai? | Catatan/yang belum pasti |
-|---|---|---|---|---|---|
-| Robotic Carwash |  |  |  |  |  |
-| Rebel — Cafe/Barber/Mini Cinema |  |  |  |  | Mini cinema disebut akan hadir; status/tanggal perlu konfirmasi |
-| Rebel House |  |  |  |  | Pastikan ketentuan penyajian informasi minuman dan acara |
-| Kampoeng Garage |  |  |  |  |  |
-| Scudetto Auto Detailing |  |  |  |  |  |
-| Club House Rebellion MC 13 Indonesia |  |  |  |  | Hubungan resmi dan cakupan publikasi perlu konfirmasi |
-
-## E. Aset, izin, dan arahan visual
-
-- Logo brand dan format file yang tersedia: **Belum diisi**
-- Foto/video lokasi atau kegiatan: **Belum diisi**
-- Foto arsip owner yang boleh dipakai: **Belum diisi**
-- Siapa pemilik/pemegang hak tiap aset? **Belum diisi**
-- Apakah orang yang dapat dikenali dalam aset sudah memberi izin publikasi? **Belum dikonfirmasi**
-- Font, musik, suara, atau aset pihak ketiga yang sudah digunakan: **Belum diisi**
-- Warna/identitas visual yang wajib dipertahankan: **Belum diisi**
-- Referensi website/visual dan hal yang disukai dari tiap referensi: **Belum diisi**
-- Hal yang tidak ingin ditiru atau digunakan: **Belum diisi**
+- Foto arsip owner/NSR: **Tidak tersedia**.
+- Owner meminta memakai gambar yang bersumber dari film *The Legend of Speed* untuk bagian tentang NSR.
+- Hak cipta gambar/frame film atau foto sumber tetap harus diperiksa; **jangan mengunduh/menerbitkan sebelum izin dan lisensi penggunaan website/komersial dikonfirmasi**. Bila tidak tersedia izin, tawarkan ilustrasi orisinal yang tidak menyalin frame dan beri label jelas bahwa itu ilustrasi/referensi, bukan motor milik owner.
+- Foto tim/lokasi, logo, aset tiap brand, izin talent/orang yang dikenali, dan sumber aset lainnya: **Belum diinventarisasi**.
 
 ## F. LYLA — pemandu tur virtual
 
-- Karakter LYLA: rider perempuan fiktif, 3D, pemandu virtual; suara perempuan — konsep sudah disepakati.
-- Usia tampilan (harus jelas karakter dewasa): **Belum diputuskan**
-- Kepribadian (mis. ramah, tegas, humor, gaya lokal): **Belum diisi**
-- Bahasa dan ragam bahasa: **Belum diputuskan**
-- Busana, helm, motor, dan atribut: **Belum diputuskan**
-- Simbol/patch/brand yang boleh ada pada pakaian/objek: **Belum dikonfirmasi**
-- Apakah suara menggunakan talent manusia, voice actor, atau metode lain: **Belum diputuskan**
-- Hak penggunaan suara dan persetujuan talent: **Belum dikonfirmasi**
-- Apakah tur memakai suara? Jika ya, suara harus dimulai oleh pengguna dan tersedia transkrip/subtitel.
-- Apakah LYLA hanya memandu rute tetap atau interaktif? **Belum diputuskan**
-- Bagian/area yang akan dikunjungi LYLA: **Belum diisi**
-- Catatan representasi atau sensitivitas budaya: **Belum diisi**
+- Konsep disepakati: rider perempuan fiktif 3D, pemandu tur, suara perempuan.
+- Rupa, usia tampilan dewasa, busana/helm, motor, kepribadian, bahasa, suara/talent, interaktivitas, dan rute: **Belum diputuskan**.
+- Suara harus dimulai oleh pengguna; teks/subtitel dan pilihan tanpa audio disediakan.
 
-## G. Persetujuan final konten
+## G. Persetujuan final sebelum rilis
 
-- [ ] Saya telah meninjau fakta, ejaan nama, brand, dan klaim bisnis.
-- [ ] Saya menyetujui narasi owner dan bab yang akan dipublikasikan.
-- [ ] Saya menyetujui penggunaan nama, foto, kutipan, dan aset yang tercantum.
-- [ ] Izin pihak lain yang dapat dikenali telah diperoleh bila diperlukan.
-- [ ] Saya telah menandai bagian privat/tidak boleh dipublikasikan.
-- [ ] Saya memahami bahwa konten dapat disunting untuk keterbacaan tanpa mengubah fakta, dan perubahan makna perlu persetujuan ulang.
-
-Nama pemberi persetujuan: **Belum diisi**  
-Tanggal: **Belum diisi**  
-Catatan/koreksi: **Belum diisi**
+- [x] Owner menyetujui penggunaan kembali cerita yang diberikan untuk website baru.
+- [x] Owner meminta kisah pribadi pada sumber ditampilkan apa adanya.
+- [ ] Owner meninjau naskah final dan akurasi nama/tanggal/angka/klaim.
+- [ ] Izin untuk aset film, foto, logo, talent, dan pihak lain dikonfirmasi.
+- [ ] Data alamat, jam, kontak, peta, CTA, menu/layanan dan informasi publik diverifikasi.
+- [ ] Owner menyetujui versi final yang akan dipublikasikan.
