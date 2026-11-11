@@ -1,17 +1,24 @@
 # Laporan Audit Repository — POS Bangka Garage
 
-> **Status audit:** tinjauan statis read-only atas file yang terlihat pada branch `main`. Ini bukan audit keamanan penuh, bukan pemeriksaan langsung database/Supabase atau hosting, dan tidak mengubah, menonaktifkan, atau menghapus aplikasi.
+> **Status audit:** tinjauan statis read-only atas file yang terlihat pada branch `main`. Ini bukan audit keamanan penuh dan bukan pemeriksaan langsung database/Supabase atau hosting. Aplikasi dan data belum diubah.
 >
 > **Repository:** `BangkaGarage/carwash-robotic-pos`  
 > **Branch yang diperiksa:** `main`  
-> **Commit acuan:** `4d8f7be7abc4b17425903c622aab58f7c51407d0`  
-> **Tujuan:** persiapan peralihan aplikasi POS menjadi website Bangka Garage. Nama repository belum diubah.
+> **Commit acuan saat audit statis:** `4d8f7be7abc4b17425903c622aab58f7c51407d0`  
+> **Tujuan:** mendokumentasikan aplikasi POS lama sebelum repository dialihkan ke website Bangka Garage. Nama repository akan diubah kemudian.
+
+## Pembaruan dari pemilik
+
+- Pemilik menyatakan aplikasi POS di repository ini **sudah tidak dipakai untuk operasional**.
+- Pemilik telah membuat aplikasi POS baru menggunakan Claude dan meng-host-nya di Hostinger.
+- Karena itu, ketergantungan operasional terhadap aplikasi POS lama dinyatakan tidak ada menurut pemilik. Status database/proyek Supabase lama, retensi data, backup, dan kebutuhan arsip **belum dikonfirmasi**.
+- Keputusan ini mengurangi risiko penghentian aplikasi lama, tetapi tidak dengan sendirinya mengizinkan penghapusan database, data, source, kredensial, atau riwayat Git.
 
 ## Ringkasan eksekutif
 
 Repository ini berisi aplikasi kasir carwash berbasis HTML/CSS/JavaScript yang berkomunikasi langsung dari browser dengan Supabase. Kode yang terlihat mencakup login dan role, transaksi, master kendaraan/layanan, data member/kendaraan member, pembayaran, stamp/reward, laporan, ekspor CSV, dan cetak nota 80 mm.
 
-Website baru menggantikan aplikasi POS merupakan keputusan pemilik. Namun, audit statis ini **belum cukup untuk menyetujui penghentian POS atau penghapusan data**. Belum ada bukti di file repository tentang skema database, kebijakan Row Level Security (RLS), backup/pemulihan, deployment, penggunaan production, atau retensi data. Sebelum POS digantikan, pemilik operasional perlu memastikan apakah aplikasi/data masih dibutuhkan dan menyetujui arsip serta pemulihan.
+Website baru menggantikan aplikasi POS dalam repository ini merupakan keputusan pemilik. POS lama tidak lagi digunakan operasional menurut pemilik, dan POS baru berada di Hostinger. Sebelum menghapus atau menonaktifkan layanan/data lama, tetap pastikan status Supabase, backup, retensi, serta kebutuhan arsip.
 
 ## Inventaris yang terlihat
 
@@ -21,8 +28,8 @@ Website baru menggantikan aplikasi POS merupakan keputusan pemilik. Namun, audit
 | `index.html` | UI login, dashboard, transaksi, daftar transaksi, master kendaraan dan layanan, laporan, serta navigasi kasir/admin. |
 | `styles.css` | Gaya responsif untuk aplikasi kasir. |
 | `app.js` | Integrasi Supabase browser-side; autentikasi; role; baca/tulis transaksi, pembayaran, member, kendaraan, layanan, aturan harga, loyalty ledger; CSV dan nota. |
-| `docs/` | Brief, roadmap, template audit, dan kuesioner proyek. |
-| Manifest/build/test/deployment/schema | Tidak terlihat pada daftar file yang terinventarisasi di branch ini: `package.json`, lockfile, migrasi/schema database, automated tests, dan workflow CI/CD tidak terdaftar. Ini tidak membuktikan bahwa tidak ada konfigurasi di luar repository. |
+| `docs/` | Brief, roadmap, template audit, kuesioner, serta dokumen konten proyek. |
+| Manifest/build/test/deployment/schema | Tidak terlihat pada daftar file yang terinventarisasi saat audit: `package.json`, lockfile, migrasi/schema database, automated tests, dan workflow CI/CD tidak terdaftar. Ini tidak membuktikan bahwa tidak ada konfigurasi di luar repository. |
 
 ## Fitur POS yang teridentifikasi dari kode
 
@@ -38,41 +45,40 @@ Website baru menggantikan aplikasi POS merupakan keputusan pemilik. Namun, audit
 
 ## Temuan keamanan dan batas pemeriksaan
 
-1. Aplikasi menggunakan Supabase secara langsung dari browser. Konfigurasi yang terlihat mencakup URL proyek dan publishable key. Publishable/anon key memang lazim berada di klien; itu **bukan** pengganti kebijakan akses. Pastikan RLS aktif dan kebijakan database membatasi akses per role dengan benar.
-2. Kode klien menyembunyikan navigasi owner-only berdasarkan profil, tetapi kontrol UI saja tidak mengamankan data. Verifikasi setiap tabel, view, fungsi, storage bucket, dan operasi tulis melalui RLS/otorisasi sisi server.
-3. Tidak ditemukan bukti dari pemeriksaan file ini bahwa service-role key ada atau tidak ada pada seluruh riwayat Git, konfigurasi eksternal, log, atau platform deploy. Jangan memublikasikan secret. Jika dicurigai terpapar, revoke/rotate melalui prosedur Supabase dan bersihkan dengan prosedur penanganan secret.
-4. Karena schema, RLS policy, konfigurasi Supabase, audit log, dan deployment tidak diperiksa, tingkat keamanan database **belum dapat dinilai**.
-5. Tidak ada pemeriksaan dependency otomatis, lockfile, test, workflow, hosting, DNS, backup, atau restore pada repository yang terlihat. Minta pemilik teknis mengonfirmasi apakah berada di luar repo.
-6. UI mengekspor transaksi ke CSV dan membuat nota; pastikan akses, penyimpanan, dan distribusi ekspor operasional dikendalikan.
+1. Aplikasi menggunakan Supabase secara langsung dari browser. Konfigurasi yang terlihat mencakup URL proyek dan publishable key. Publishable/anon key lazim berada di klien; itu bukan pengganti kebijakan akses database.
+2. Kode klien menyembunyikan navigasi owner-only berdasarkan profil, tetapi kontrol UI saja tidak mengamankan data. RLS dan otorisasi harus diverifikasi pada tabel, view, fungsi, storage bucket, serta operasi tulis.
+3. Pemeriksaan file ini tidak membuktikan ada/tidaknya service-role key pada seluruh riwayat Git, konfigurasi eksternal, log, atau platform deploy. Jangan memublikasikan secret. Jika dicurigai terpapar, revoke/rotate melalui prosedur penyedia layanan.
+4. Karena schema, RLS policy, konfigurasi Supabase, audit log, dan deployment tidak diperiksa, tingkat keamanan database belum dapat dinilai.
+5. Tidak ada pemeriksaan dependency otomatis, lockfile, test, workflow, hosting, DNS, backup, atau restore pada repository yang terlihat.
+6. UI mengekspor transaksi ke CSV dan membuat nota; pastikan ekspor lama ditangani dengan aman jika masih tersimpan di perangkat atau layanan lain.
 
-## Risiko penggantian
+## Risiko peralihan
 
-- Menghapus atau mengganti source code tidak menghapus data Supabase secara otomatis, tetapi memutus akses operasional ke POS jika aplikasi sedang digunakan.
-- Menghapus/menonaktifkan database atau project Supabase dapat menyebabkan kehilangan data dan layanan. Jangan lakukan tanpa persetujuan pemilik data, kebijakan retensi, backup, dan uji pemulihan.
-- Repository saat ini private menurut metadata yang diperiksa. Jika kelak dibuat publik, lakukan pemeriksaan riwayat Git dan seluruh aset/configuration terlebih dahulu; jangan mengandalkan penghapusan file terbaru saja untuk menghilangkan secret dari history.
-- Website publik sebaiknya tidak menggunakan akses/kredensial POS. Pisahkan website publik dari project/data POS kecuali ada kebutuhan integrasi yang dirancang dan diamankan secara terpisah.
+- Menghapus source code tidak menghapus data Supabase secara otomatis. Sebaliknya, menghapus/menonaktifkan database atau project Supabase dapat menyebabkan hilangnya data yang mungkin masih perlu disimpan.
+- Pemilik menyatakan POS lama sudah tidak digunakan operasional, tetapi data transaksi/member dan kewajiban retensinya belum dikonfirmasi.
+- POS baru berada di Hostinger menurut pemilik; konfigurasi, database, domain, dan backup aplikasi baru berada di luar lingkup audit repository ini.
+- Repository ini private saat metadata diperiksa. Jika kelak dibuat publik, tinjau riwayat Git dan seluruh aset/configuration terlebih dahulu; menghapus file pada commit terbaru saja tidak menghilangkan konten dari history.
+- Website publik sebaiknya tidak menggunakan akses atau kredensial POS lama/baru kecuali ada kebutuhan integrasi yang dirancang dan diamankan secara terpisah.
 
-## Yang belum diverifikasi — perlu pemilik teknis/operasional
+## Hal yang masih perlu dikonfirmasi
 
-- Apakah POS saat ini aktif dipakai di production, siapa penggunanya, dan kapan aman dihentikan.
-- Nama/struktur tabel, RLS policies, trigger, function, storage, integrasi, dan lokasi schema/migrations.
-- Data yang harus dipertahankan (transaksi, member, layanan, laporan) dan retensi yang disetujui.
-- Status backup, lokasi aman, kapan terakhir diuji restore, dan siapa yang bertanggung jawab.
-- Hosting, domain/subdomain, DNS, secrets/configuration, staging, dan prosedur deploy/rollback.
-- Apakah ada sumber lain yang menyimpan data POS atau prosedur operasional manual saat POS tidak tersedia.
-- Pengarsipan POS: release/tag atau branch yang dipertahankan, tanpa memasukkan dump data atau secret ke GitHub.
+- Apakah project/database Supabase lama masih aktif dan siapa pemiliknya.
+- Data apa yang perlu dipertahankan, retensi yang berlaku, dan siapa yang menyetujui penghapusan.
+- Apakah backup POS lama tersedia dan apakah pemulihan pernah diuji.
+- Apakah source lama cukup diarsipkan melalui riwayat Git/tag atau perlu cara arsip tambahan.
+- Apakah POS baru di Hostinger memiliki data yang perlu dicadangkan atau dokumentasi yang harus dipertahankan (tidak perlu dibagikan di repository ini).
 
 ## Gerbang sebelum penggantian teknis
 
-- [ ] Pemilik operasional mengonfirmasi POS boleh dihentikan dan tanggalnya.
-- [ ] Pemilik data menetapkan data yang harus disimpan serta kebijakan retensi.
-- [ ] Pemilik teknis memeriksa schema/RLS/integrasi secara aman dan melaporkan hasil tanpa secret/data pribadi.
-- [ ] Backup dibuat di lokasi terkendali dan pemulihan diuji.
-- [ ] Source POS diarsipkan pada tag/release/branch yang jelas.
-- [ ] Rencana rollback dan penanggung jawab disepakati.
-- [ ] Rencana deploy website tidak memublikasikan Supabase POS atau data operasional.
-- [ ] Tidak ada perubahan production sampai seluruh gate disetujui.
+- [x] Pemilik menyatakan POS lama tidak dipakai lagi untuk operasional.
+- [x] Pemilik menyatakan POS baru dibuat terpisah menggunakan Claude dan di-host di Hostinger.
+- [ ] Pemilik data menetapkan retensi dan keputusan atas database/data Supabase lama.
+- [ ] Pemilik teknis mengonfirmasi status project Supabase lama dan RLS/integrasi secara aman tanpa membagikan secret/data pribadi.
+- [ ] Backup yang diperlukan dibuat di lokasi terkendali dan pemulihannya diuji.
+- [ ] Source POS lama dapat diakses melalui riwayat Git/tag/arsip yang disetujui.
+- [ ] Rencana peralihan website tidak memublikasikan data atau kredensial POS.
+- [ ] Tidak menonaktifkan database atau menghapus data lama tanpa persetujuan eksplisit.
 
 ## Kesimpulan saat ini
 
-**Rekomendasi:** lanjutkan perencanaan website dan audit operasional, tetapi jangan hapus source POS, menonaktifkan Supabase, menghapus data, mengganti konfigurasi production, atau rename repository sebagai bagian dari audit ini. Peralihan repository ke website dilakukan setelah gerbang di atas selesai dan pemilik memberi persetujuan.
+**Rekomendasi:** source POS dapat digantikan oleh website setelah pemilik memastikan source lama tetap dapat diakses dari riwayat Git dan keputusan retensi/arsip dibuat. Tidak ada alasan operasional yang diketahui untuk mempertahankan aplikasi lama tetap berjalan, menurut keterangan pemilik. Namun, audit ini tidak menonaktifkan Supabase, tidak menghapus data, tidak mengubah deployment, dan tidak mengubah nama repository.
