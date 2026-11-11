@@ -1,86 +1,134 @@
 <!doctype html>
 <html lang="id">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#111827" />
-    <title>Bangka Garage — Robotic Carwash POS</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#171613" />
+    <meta name="description" content="Jelajahi Bangka Garage, culture & lifestyle hub di Pangkal Pinang. Temukan Robotic Carwash, Rebel, Rebel House, Kampoeng Garage, dan Scudetto." />
+    <title>Bangka Garage — Satu Kawasan, Banyak Cerita</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
-    <style>
-      .toast{position:fixed;right:22px;top:22px;z-index:20;max-width:360px;padding:12px 15px;border-radius:10px;background:#111827;color:#fff;font-size:13px;font-weight:700;opacity:0;pointer-events:none;transform:translateY(-8px);transition:.2s}.toast.show{opacity:1;transform:translateY(0)}.toast.error{background:#b91c1c}.toast.info{background:#1d4ed8}
-      .list-toolbar{display:grid;grid-template-columns:1fr 220px;gap:12px;margin-bottom:18px}.status-badge{display:inline-flex;padding:5px 9px;border-radius:999px;background:#f3f4f6;color:#374151;font-size:11px;font-weight:800}.status-badge.waiting{background:#ffedd5;color:#9a3412}.status-badge.done{background:#dcfce7;color:#166534}.status-badge.paid{background:#dbeafe;color:#1d4ed8}.table-action{border:0;border-radius:8px;padding:7px 10px;background:#fff0df;color:#c2410c;font-weight:800;cursor:pointer}.transaction-detail{margin-top:18px}.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}.detail-heading-actions{display:flex;align-items:center;gap:10px}.detail-actions{display:flex;gap:10px;flex-wrap:wrap}.detail-items{display:grid;gap:8px;margin:10px 0 20px}.detail-item{display:flex;justify-content:space-between;gap:12px;padding:10px 12px;border:1px solid #e5e7eb;border-radius:8px}.detail-item small{display:block;color:#6b7280;margin-top:3px}.payment-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.change-amount{font-size:16px;font-weight:800;color:#166534;margin:14px 0}.report-filter{display:grid;grid-template-columns:1fr 1fr auto;gap:12px;align-items:end;margin-bottom:18px}.report-stats{margin-bottom:18px}@media(max-width:850px){.list-toolbar{grid-template-columns:1fr}.detail-grid,.payment-grid,.report-filter{grid-template-columns:1fr}.detail-heading-actions{align-items:flex-start;flex-direction:column}}
-    </style>
+    <script src="site.js" defer></script>
   </head>
   <body>
-    <div id="toast" class="toast" role="status"></div>
+    <a class="skip-link" href="#main">Langsung ke konten</a>
+    <header class="site-header">
+      <a class="wordmark" href="#home" aria-label="Bangka Garage, beranda">
+        <span class="wordmark-mark" aria-hidden="true">BG</span>
+        <span>BANGKA<span class="wordmark-light">GARAGE</span></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Buka navigasi">
+        <span></span><span></span>
+      </button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Navigasi utama">
+        <a href="#experience">Pengalaman</a>
+        <a href="#story">Cerita</a>
+        <a href="#visit">Lokasi</a>
+        <a class="nav-cta" href="#businesses">Jelajahi kawasan <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
 
-    <section id="loginView" class="login-view">
-      <div class="login-card">
-        <div class="brand-mark">BG</div>
-        <p class="eyebrow">BANGKA GARAGE</p>
-        <h1>Robotic Carwash POS</h1>
-        <p class="muted">Masuk untuk mengelola transaksi dan operasional carwash.</p>
-        <form id="loginForm" class="stack-form">
-          <label>
-            Email
-            <input id="emailInput" type="email" autocomplete="email" required placeholder="nama@email.com" />
-          </label>
-          <label>
-            Password
-            <input id="passwordInput" type="password" autocomplete="current-password" required placeholder="Masukkan password" />
-          </label>
-          <button class="primary-button" type="submit">Masuk ke aplikasi</button>
-          <p id="loginError" class="form-error" aria-live="polite"></p>
-        </form>
-      </div>
-    </section>
-
-    <section id="appView" class="app-view hidden">
-      <aside class="sidebar">
-        <div class="sidebar-brand">
-          <div class="brand-mark small">BG</div>
-          <div><strong>Robotic POS</strong><span>Bangka Garage</span></div>
+    <main id="main">
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="hero-texture" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> PANGKAL PINANG · BANGKA BELITUNG</p>
+          <h1 id="hero-title">Satu kawasan.<br /><span>Banyak cerita.</span></h1>
+          <p class="hero-description">Culture, lifestyle, dan otomotif bertemu di Bangka Garage—ruang untuk menjelajah, menikmati waktu, dan menemukan pengalaman yang berbeda.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#businesses">Jelajahi kawasan <span aria-hidden="true">↗</span></a>
+            <a class="button button-text" href="#visit">Temukan lokasi <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="hero-note"><span class="live-dot"></span> Culture &amp; lifestyle hub</div>
         </div>
-        <nav class="side-nav" aria-label="Navigasi utama">
-          <button class="nav-item active" data-page="dashboardPage">Ringkasan</button>
-          <button class="nav-item" data-page="transactionPage">Transaksi Kasir</button>
-          <button class="nav-item" data-page="transactionListPage">Daftar Transaksi</button>
-          <button class="nav-item owner-only" data-page="vehiclePage">Master Kendaraan</button>
-          <button class="nav-item owner-only" data-page="servicePage">Master Layanan</button>
-          <button class="nav-item owner-only" data-page="reportPage">Laporan</button>
-        </nav>
-        <div class="sidebar-footer">
-          <div class="user-chip"><span id="userInitials">--</span><div><strong id="userEmail">-</strong><small id="userRole">-</small></div></div>
-          <button id="logoutButton" class="ghost-button">Keluar</button>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+          <div class="art-sun"></div>
+          <div class="art-garage">
+            <div class="garage-roof"></div>
+            <div class="garage-body"><div class="garage-sign">BANGKA<br /><b>GARAGE</b></div><div class="garage-opening"><i></i><i></i><i></i><i></i></div></div>
+            <div class="garage-ground"></div>
+          </div>
+          <div class="art-caption"><span>01 / 05</span><span>THE PLACE TO GATHER</span></div>
+          <div class="art-stamp">BANGKA<br />BELITUNG</div>
         </div>
-      </aside>
+        <div class="hero-bottom"><span>SCROLL UNTUK MENJELAJAH</span><span class="scroll-line"></span><span>01 — 05</span></div>
+      </section>
 
-      <main class="main-content">
-        <header class="topbar">
-          <div><p class="eyebrow">OPERASIONAL</p><h2 id="pageTitle">Ringkasan</h2></div>
-          <div class="status-pill"><span class="status-dot"></span> Terhubung ke Supabase</div>
-        </header>
+      <section class="intro section-pad" id="experience" aria-labelledby="intro-title">
+        <div class="section-kicker"><span>01</span> TENTANG BANGKA GARAGE</div>
+        <div class="intro-grid">
+          <h2 id="intro-title">Lebih dari sekadar<br />tempat untuk <em>singgah.</em></h2>
+          <div class="intro-copy">
+            <p>Bangka Garage menghadirkan beragam unit usaha dan ruang berkumpul dalam satu kawasan. Dari merawat kendaraan hingga menikmati kopi dan waktu bersama, setiap unit punya pengalaman dan jam layanannya sendiri.</p>
+            <a class="inline-link" href="#businesses">Kenali setiap pengalaman <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="intro-rule"><span></span><span>BERADA DI PANGKAL PINANG, PULAU BANGKA</span></div>
+      </section>
 
-        <section id="dashboardPage" class="page active-page">
-          <div class="page-intro"><div><p class="eyebrow">HARI INI</p><h3>Selamat datang kembali</h3><p class="muted">Pantau operasional carwash dari satu tempat.</p></div><button class="primary-button compact" data-page-jump="transactionPage">+ Transaksi baru</button></div>
-          <div class="stat-grid"><article class="stat-card"><span>Transaksi hari ini</span><strong id="todayTransactionCount">0</strong><small id="todayTransactionNote">Memuat data...</small></article><article class="stat-card"><span>Omzet hari ini</span><strong id="todayRevenue">Rp 0</strong><small id="todayRevenueNote">Memuat data...</small></article><article class="stat-card"><span>Member aktif</span><strong>0</strong><small>Modul member akan diaktifkan berikutnya</small></article></div>
-          <div class="panel-grid"><article class="panel"><div class="panel-heading"><div><p class="eyebrow">AKSES CEPAT</p><h3>Mulai operasional</h3></div></div><div class="quick-actions"><button class="quick-action" data-page-jump="transactionPage"><b>+</b><span>Input transaksi kendaraan</span></button><button class="quick-action owner-only" data-page-jump="vehiclePage"><b>+</b><span>Tambah master kendaraan</span></button></div></article><article class="panel"><p class="eyebrow">STATUS SISTEM</p><h3>Fondasi aplikasi siap</h3><ul class="check-list"><li>Supabase terhubung</li><li>Role Owner dan Admin aktif</li><li>Master layanan sudah tersedia</li><li>Rekomendasi harga sudah tersedia</li></ul></article></div>
-        </section>
+      <section class="businesses section-pad" id="businesses" aria-labelledby="businesses-title">
+        <div class="section-heading">
+          <div><div class="section-kicker"><span>02</span> JELAJAHI KAWASAN</div><h2 id="businesses-title">Pilih cara Anda<br /><em>menikmati Bangka Garage.</em></h2></div>
+          <p>Lima unit, beragam suasana. Temukan tempat yang sesuai dengan rencana Anda hari ini.</p>
+        </div>
+        <div class="business-grid">
+          <article class="business-card card-wash">
+            <div class="card-top"><span class="card-number">01</span><span class="card-icon" aria-hidden="true">↗</span></div>
+            <div class="card-illustration wash-illustration" aria-hidden="true"><span class="wash-ring"></span><span class="wash-car">CAR<br />WASH</span><span class="wash-drop">✳</span></div>
+            <div class="card-content"><p class="card-category">AUTO CARE</p><h3>Robotic Carwash</h3><p>Carwash &amp; Motorwash untuk kendaraan Anda.</p><div class="card-hours"><span>MIN–JUM</span><strong>07.30–20.30</strong><span>SAB</span><strong>07.30–17.00</strong></div><a class="card-link" href="https://wa.me/628117179892" target="_blank" rel="noopener noreferrer">Hubungi Robotic Carwash <span aria-hidden="true">↗</span></a></div>
+          </article>
 
-        <section id="transactionPage" class="page">
-          <div class="page-intro"><div><p class="eyebrow">KASIR</p><h3>Transaksi kendaraan</h3><p class="muted">Masukkan nomor kendaraan dan layanan. Data konsumen tidak wajib.</p></div></div>
-          <div class="panel transaction-panel"><form id="transactionForm" class="transaction-form"><div class="form-section"><h4>Identitas kendaraan</h4><div class="form-grid"><label>Nomor kendaraan *<input id="plateInput" required placeholder="Contoh: BN 1234 XX" /></label><label>Nama konsumen <input id="customerInput" placeholder="Opsional" /></label><label>Master kendaraan<select id="vehicleSelect"><option value="">Pilih jika tersedia</option></select></label></div></div><div class="form-section"><h4>Layanan</h4><div class="form-grid"><label>Layanan<select id="serviceSelect" required><option value="">Memuat layanan...</option></select></label><label>Kondisi kendaraan<select id="conditionSelect"><option value="normal">Normal</option><option value="extra_dirty">Extra Dirty</option></select></label><label>Harga final <input id="finalPriceInput" type="number" min="0" step="1000" placeholder="Mengikuti rekomendasi" /></label><label>Alasan perubahan harga <input id="priceReasonInput" placeholder="Wajib diisi jika harga diubah" /></label></div><div id="priceRecommendation" class="recommendation">Pilih kendaraan dan layanan untuk melihat rekomendasi harga.</div></div><div class="form-actions"><button type="button" class="secondary-button" data-page-jump="dashboardPage">Batal</button><button class="primary-button" type="submit">Simpan transaksi</button></div><p class="muted tiny">Transaksi disimpan dengan status Menunggu Dicuci. Pembayaran dan pencetakan nota dilakukan pada tahap berikutnya.</p></form></div>
-        </section>
+          <article class="business-card card-rebel">
+            <div class="card-top"><span class="card-number">02</span><span class="card-icon" aria-hidden="true">↗</span></div>
+            <div class="card-illustration rebel-illustration" aria-hidden="true"><span class="coffee-steam"></span><span class="coffee-cup">R</span><span class="coffee-saucer"></span></div>
+            <div class="card-content"><p class="card-category">CAFE · BARBER · COMING IN DEVELOPMENT</p><h3>Rebel</h3><p>Cafe, barber, dan mini cinema yang sedang dalam pembangunan.</p><div class="card-hours"><span>CAFE</span><strong>07.30–23.00</strong><span>BARBER</span><strong>10.00–22.00</strong></div><p class="coming-note">Mini cinema direncanakan hadir pada 2027. Tanggal pembukaan belum diumumkan.</p><div class="card-links"><a class="card-link" href="https://wa.me/628117113536" target="_blank" rel="noopener noreferrer">Hubungi Cafe <span aria-hidden="true">↗</span></a><a class="card-link" href="https://wa.me/628117287337" target="_blank" rel="noopener noreferrer">Hubungi Barber <span aria-hidden="true">↗</span></a></div></div>
+          </article>
 
-        <section id="transactionListPage" class="page"><div class="page-intro"><div><p class="eyebrow">OPERASIONAL</p><h3>Daftar transaksi</h3><p class="muted">Cari transaksi berdasarkan nomor kendaraan atau nomor transaksi.</p></div><button id="refreshTransactionsButton" class="secondary-button">Muat ulang</button></div><div class="panel"><div class="list-toolbar"><input id="transactionSearchInput" placeholder="Cari plat atau nomor transaksi..." /><select id="transactionStatusFilter"><option value="">Semua status</option><option value="menunggu_dicuci">Menunggu Dicuci</option><option value="sedang_dicuci">Sedang Dicuci</option><option value="selesai_dicuci">Selesai Dicuci</option><option value="menunggu_pembayaran">Menunggu Pembayaran</option><option value="lunas">Lunas</option><option value="dibatalkan">Dibatalkan</option></select></div><div class="table-wrap"><table><thead><tr><th>Waktu</th><th>No. Transaksi</th><th>Plat</th><th>Kendaraan</th><th>Status</th><th>Total</th><th>Aksi</th></tr></thead><tbody id="transactionTableBody"><tr><td colspan="7" class="empty-cell">Memuat data...</td></tr></tbody></table></div></div><div id="transactionDetailPanel" class="panel transaction-detail hidden"><div class="panel-heading"><div><p class="eyebrow">PROSES TRANSAKSI</p><h3 id="detailTransactionTitle">Pilih transaksi</h3><p id="detailTransactionMeta" class="muted">Pilih transaksi dari tabel untuk mengubah status atau menerima pembayaran.</p></div><div class="detail-heading-actions"><span id="detailTransactionStatus" class="status-badge waiting">-</span><button id="printReceiptButton" class="secondary-button">Cetak nota</button></div></div><div class="detail-grid"><div><h4>Layanan</h4><div id="detailItems" class="detail-items">Memuat layanan...</div><h4>Status kendaraan</h4><p class="muted tiny">Perbarui sesuai posisi kendaraan di area carwash.</p><div class="detail-actions"><button class="secondary-button" data-status-action="sedang_dicuci">Mulai Dicuci</button><button class="secondary-button" data-status-action="selesai_dicuci">Selesai Dicuci</button></div></div><div><h4>Pembayaran</h4><div class="payment-grid"><label>Metode<select id="paymentMethod"><option value="cash">Cash</option><option value="qris">QRIS</option><option value="debit">Debit</option><option value="credit">Credit</option><option value="other">Lainnya</option></select></label><label>Jumlah diterima<input id="amountReceived" type="number" min="0" step="1000" placeholder="0" /></label></div><p id="changeAmount" class="change-amount">Kembalian: Rp 0</p><button id="paymentButton" class="primary-button">Simpan Pembayaran &amp; Lunas</button></div></div></div></section>
+          <article class="business-card card-house">
+            <div class="card-top"><span class="card-number">03</span><span class="card-icon" aria-hidden="true">↗</span></div>
+            <div class="card-illustration house-illustration" aria-hidden="true"><span class="house-moon"></span><span class="house-window">RH</span><span class="house-light"></span></div>
+            <div class="card-content"><p class="card-category">COFFEESHOP &amp; BAR</p><h3>Rebel House</h3><p>Tempat untuk menikmati kopi, minuman, dan waktu bersama.</p><div class="card-hours"><span>SETIAP HARI</span><strong>08.00–00.00</strong></div><div class="card-links"><a class="card-link" href="https://instagram.com/rebelhouse86" target="_blank" rel="noopener noreferrer">Instagram @rebelhouse86 <span aria-hidden="true">↗</span></a><a class="card-link" href="https://wa.me/628117113536" target="_blank" rel="noopener noreferrer">Hubungi Rebel House <span aria-hidden="true">↗</span></a></div></div>
+          </article>
 
-        <section id="vehiclePage" class="page"><div class="page-intro"><div><p class="eyebrow">MASTER DATA</p><h3>Master kendaraan</h3><p class="muted">Daftar kendaraan digunakan sebagai rekomendasi kategori harga.</p></div></div><div class="panel"><div class="table-wrap"><table><thead><tr><th>Merk</th><th>Model</th><th>Jenis</th><th>Energi</th><th>Kategori harga</th><th>Status robotic</th></tr></thead><tbody id="vehicleTableBody"><tr><td colspan="6" class="empty-cell">Memuat data...</td></tr></tbody></table></div></div></section>
-        <section id="servicePage" class="page"><div class="page-intro"><div><p class="eyebrow">MASTER DATA</p><h3>Master layanan</h3><p class="muted">Harga dasar layanan yang tersedia di kasir.</p></div></div><div class="panel"><div class="table-wrap"><table><thead><tr><th>Kode</th><th>Layanan</th><th>Jenis</th><th>Harga dasar</th><th>Stamp</th><th>Status</th></tr></thead><tbody id="serviceTableBody"><tr><td colspan="6" class="empty-cell">Memuat data...</td></tr></tbody></table></div></div></section>
-        <section id="reportPage" class="page"><div class="page-intro"><div><p class="eyebrow">SUPER ADMIN</p><h3>Laporan transaksi</h3><p class="muted">Rekap operasional dan omzet berdasarkan periode.</p></div><button id="exportReportButton" class="secondary-button">Export CSV</button></div><div class="panel report-filter"><label>Dari tanggal<input id="reportStartDate" type="date" /></label><label>Sampai tanggal<input id="reportEndDate" type="date" /></label><button id="applyReportButton" class="primary-button compact">Tampilkan</button></div><div class="stat-grid report-stats"><article class="stat-card"><span>Total transaksi</span><strong id="reportTransactionCount">0</strong><small>Semua status</small></article><article class="stat-card"><span>Transaksi lunas</span><strong id="reportPaidCount">0</strong><small>Sudah dibayar</small></article><article class="stat-card"><span>Omzet lunas</span><strong id="reportRevenue">Rp 0</strong><small>Hanya status Lunas</small></article></div><div class="panel"><div class="panel-heading"><div><p class="eyebrow">REKAP STATUS</p><h3>Transaksi periode terpilih</h3></div></div><div class="table-wrap"><table><thead><tr><th>Waktu</th><th>No. Transaksi</th><th>Plat</th><th>Status</th><th>Total</th></tr></thead><tbody id="reportTableBody"><tr><td colspan="5" class="empty-cell">Belum ada data.</td></tr></tbody></table></div></div></section>
-      </main>
-    </section>
+          <article class="business-card card-kampoeng">
+            <div class="card-top"><span class="card-number">04</span><span class="card-icon" aria-hidden="true">↗</span></div>
+            <div class="card-illustration kampoeng-illustration" aria-hidden="true"><span class="wheel wheel-back"></span><span class="wheel wheel-front"></span><span class="bike-line"></span><span class="bike-tank">KG</span></div>
+            <div class="card-content"><p class="card-category">MOTORCYCLE WORKSHOP</p><h3>Kampoeng Garage</h3><p>H-D Specialist &amp; Parts.</p><div class="card-hours"><span>SEN–SAB</span><strong>08.00–17.00</strong><span>MINGGU</span><strong>TUTUP</strong></div><a class="card-link" href="https://wa.me/6282280191176" target="_blank" rel="noopener noreferrer">Hubungi Kampoeng Garage <span aria-hidden="true">↗</span></a></div>
+          </article>
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="app.js"></script>
+          <article class="business-card card-scudetto">
+            <div class="card-top"><span class="card-number">05</span><span class="card-icon" aria-hidden="true">↗</span></div>
+            <div class="card-illustration scudetto-illustration" aria-hidden="true"><span class="detail-star">✳</span><span class="detail-surface"></span><span class="detail-sheen"></span></div>
+            <div class="card-content"><p class="card-category">AUTO FINISHING</p><h3>Scudetto</h3><p>Coating &amp; Detailing untuk kendaraan.</p><div class="card-hours"><span>SEN–SAB</span><strong>08.00–17.00</strong><span>MINGGU</span><strong>TUTUP</strong></div><a class="card-link" href="https://wa.me/628536330633" target="_blank" rel="noopener noreferrer">Hubungi Scudetto <span aria-hidden="true">↗</span></a></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="story section-pad" id="story" aria-labelledby="story-title">
+        <div class="story-mark" aria-hidden="true">BG<br /><span>86</span></div>
+        <div class="story-content"><div class="section-kicker"><span>03</span> CERITA BANGKA GARAGE</div><h2 id="story-title">Perjalanan yang<br /><em>pulang ke Bangka.</em></h2><p>Tentang mimpi masa muda, masa-masa sulit, kesempatan untuk pulih, pengalaman merantau, dan gagasan yang akhirnya dibangun di tanah asal.</p><a class="button button-light" href="https://bangkagarage.com/baru/cerita/" target="_blank" rel="noopener noreferrer">Baca cerita owner <span aria-hidden="true">↗</span></a></div>
+        <div class="story-side-note">DARI BELINYU<br />MENUJU BANGKA GARAGE</div>
+      </section>
+
+      <section class="visit section-pad" id="visit" aria-labelledby="visit-title">
+        <div class="section-kicker"><span>04</span> KUNJUNGI KAMI</div>
+        <div class="visit-grid">
+          <div><h2 id="visit-title">Sampai jumpa<br /><em>di Bangka.</em></h2><p class="visit-address">Jl. Solihin GP No.7, Melintang,<br />Kec. Rangkui, Kota Pangkal Pinang,<br />Kepulauan Bangka Belitung 33684</p><a class="button button-primary" href="https://www.google.com/maps/search/?api=1&query=Jl.+Solihin+GP+No.7%2C+Melintang%2C+Kec.+Rangkui%2C+Kota+Pangkal+Pinang%2C+Kepulauan+Bangka+Belitung+33684" target="_blank" rel="noopener noreferrer">Buka petunjuk arah <span aria-hidden="true">↗</span></a></div>
+          <div class="visit-panel"><span class="visit-panel-index">PANGKAL PINANG · BANGKA BELITUNG</span><div class="map-art" aria-hidden="true"><span class="map-road road-a"></span><span class="map-road road-b"></span><span class="map-road road-c"></span><span class="map-pin"><i></i></span><span class="map-label">BANGKA<br />GARAGE</span></div><a class="social-link" href="https://instagram.com/bangka_garage86" target="_blank" rel="noopener noreferrer"><span>Ikuti perjalanan kami</span><strong>@bangka_garage86 ↗</strong></a></div>
+        </div>
+      </section>
+
+      <section class="closing-cta"><p class="eyebrow">BANGKA GARAGE</p><h2>Temukan pengalaman<br />Anda di <em>sini.</em></h2><a class="button button-primary" href="#businesses">Jelajahi unit usaha <span aria-hidden="true">↑</span></a></section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="wordmark footer-wordmark" href="#home"><span class="wordmark-mark" aria-hidden="true">BG</span><span>BANGKA<span class="wordmark-light">GARAGE</span></span></a>
+      <p>Satu kawasan. Banyak cerita.</p>
+      <a class="footer-instagram" href="https://instagram.com/bangka_garage86" target="_blank" rel="noopener noreferrer">Instagram @bangka_garage86 ↗</a>
+      <span class="footer-copy">© <span id="current-year">2026</span> Bangka Garage</span>
+    </footer>
   </body>
 </html>
